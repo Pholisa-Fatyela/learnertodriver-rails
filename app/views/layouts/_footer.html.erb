@@ -1,0 +1,47 @@
+<footer class="application-footer">
+
+  <div class="footer-content">
+    <div class="footer-groups blocks">
+
+      <div class="group block">
+        <h3 class="group-title">Community</h3>
+        <ul class="group-list">
+          <li><%= link_to 'Business', page_path('community/business') %></li>
+          <li><%= link_to 'Customers', page_path('community/customers') %></li>
+          <li><%= link_to 'Partners', page_path('community/partners') %></li>
+          <li><%= link_to 'Sponsorships', page_path('community/sponsorships') %></li>
+        </ul>
+      </div>
+
+      <div class="group block">
+        <h3 class="group-title">Company</h3>
+        <ul class="group-list">
+          <li><%= link_to 'About', page_path('about') %></li>
+          <li><%= link_to 'Blog', posts_path %></li>
+          <li><%= link_to 'Careers', page_path('company/careers') %></li>
+        </ul>
+      </div>
+
+      <div class="group block">
+        <h3 class="group-title">Resources</h3>
+        <ul class="group-list">
+          <li><%= link_to 'Contact', page_path('resources/contact') %></li>
+          <li><%= link_to 'FAQ', page_path('resources/faq') %></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Created with ❤ by <strong>© <%= t("current_year") %> <a href="https://typographics.co.za"><%= t("dev_company") %>.</a></strong></p>
+    <ul>
+
+      <li><%= link_to 'Privacy Policy', page_path('company/privacy') %></li>
+      <li><%= link_to 'Terms of Service', page_path('company/terms') %></li>
+      <li><%= link_to 'Code of Conduct', page_path('company/codeofconduct') %></li>
+      <li><%= link_to 'Purpose', page_path('company/purpose') %></li>
+
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+<div class="content">
+    <div class="inner-section">
+        <div class="post-header">
+          <div class="heading">
+            <h1>Tests</h1>
+          </div>
+        </div>
+      <div class="post-content">
+
+        <div class="main grid cards">
+          <%= render :partial => @quizzes %>
+        </div>
+
+        <div class="pagination-container">
+          <%= paginate @quizzes %>
+        </div>
+
+
+    </div>
+  </div>
+</div>

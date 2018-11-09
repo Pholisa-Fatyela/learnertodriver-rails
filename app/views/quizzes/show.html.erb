@@ -1,0 +1,53 @@
+<section class="section">
+    <div class="main container">
+      <div class="page content">
+
+        <div class="post-header">
+          <div class="heading">
+            <h1><%= @quiz.title %> Test</h1>
+          </div>
+        </div>
+
+
+          <div class="app">
+            <h1>Heading</h1>
+            <!-- index is used to check with current question index -->
+              <!-- Hide all questions, show only the one with index === to current question index -->
+              <div>
+                <h2>Question</h2>
+                <ol>
+                  <li>
+                    <label>
+                      <!-- The radio button has three new directives -->
+                      <!-- v-bind:value sets "value" to "true" if the response is correct -->
+                      <!-- v-bind:name sets "name" to question index to group answers by question -->
+                      <!-- v-model creates binding with userResponses -->
+                      <input type="radio"> Answer
+                    </label>
+                  </li>
+                </ol>
+                <!-- The two navigation buttons -->
+                <!-- Note: prev is hidden on first question -->
+                <button>
+                  prev
+                </button>
+                <button>
+                  next
+                </button>
+              </div>
+            <div >
+              <h2>
+              Quiz finished
+            </h2>
+              <p>
+                Total score: 
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+</section>
