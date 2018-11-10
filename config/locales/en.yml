@@ -30,4 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  site_name: "Learner to Driver"
+  tagline: "Practice the South African learners test"
+  dev_company: "TypoGraphics"
+  current_year: "2018"
+  views:
+    pagination:
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      truncate: "..."
+  contact_mailer:
+    feedback:
+      subject: "Contact Mailer"
