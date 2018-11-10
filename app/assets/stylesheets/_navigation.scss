@@ -1,0 +1,155 @@
+// Primary Nav
+
+.navigation {
+  background: $dusk;
+  box-shadow: $block-shadow;
+  line-height: 50px;
+  font-size: larger;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+      display: block;
+      float: left;
+      position: relative;
+      text-decoration: none;
+      transition-duration: .5s;
+
+      ul {
+        display: none;
+        left: 0;
+        min-width: 5rem;
+        opacity: 0;
+        position: absolute;
+        transition: color .5s ease;
+        visibility: hidden;
+        z-index: 1;
+      }
+    }
+  }
+
+
+  li {
+
+    &:hover,
+    &:focus-within {
+      cursor: pointer;
+    }
+  }
+
+
+  li:focus-within a {
+    outline: none;
+  }
+
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block
+  }
+
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+
+}
+
+.navlist {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  li {
+
+    ul {
+      background-color: $dusk;
+    }
+  }
+
+  a {
+    border-bottom: 2px solid $clear-grey;
+    color: $grey;
+    display: inline-block;
+    height: inherit;
+    line-height: inherit;
+    padding: 5px 25px;
+    text-transform: uppercase;
+    transition: color 150ms ease;
+
+    &:hover {
+      background: $base;
+      border-bottom: 2px solid $blue;
+      color: $white;
+    }
+
+    &.active-link {
+      background: $charcoal;
+      border-bottom: 2px solid $bright;
+      color: $white;
+    }
+  }
+}
+
+.nav-logo {
+
+  .logo {
+    width: 90px;
+  }
+}
+
+// Secondary nav
+
+.secondary-nav {
+  background: $white;
+  border-bottom: 2px solid $clean;
+  box-shadow: $block-shadow;
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem;
+}
+
+.header-links {
+  margin: 0 1.2rem;
+  padding: 16px;
+}
+
+.breadcrumbs {
+  list-style: none;
+  margin: 0 1.2rem;
+  padding: 16px;
+
+  li {
+    display: inline;
+    font-size: 18px;
+
+    &+li {
+      &::before {
+        padding: 8px;
+        color: $black;
+        content: "/\00a0";
+      }
+    }
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      color: $sky;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.cards {
+  display: flex;
+}
+
+.card {
+  background: $white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  display: flex;
+  flex-wrap: wrap;
+  margin: .9rem auto;
+  max-width: 361px;
+
+  h2 {
+    color: $night;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  p {
+    color: $base;
+    margin: 1.5rem 0;
+    font-size: 1.1em;
+  }
+
+  .cta {
+    align-self: flex-end;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.card-image {
+  img {
+    border-bottom: 3px solid $sky;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+.card-header {
+  border-bottom: 1px solid $grey;
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex: 1 1 100%;
+  }
+}

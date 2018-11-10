@@ -1,0 +1,243 @@
+/*---------------------------
+       Common SCSS
+-----------------------------*/
+
+body {
+  background: $cream;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: 400;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  display: block;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.2em;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  color: $black;
+  font-size: 1.2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 0 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.container {
+  min-height: 70vh;
+  padding: 30px 0;
+}
+
+.message-container {
+  background: shade($blue, 30%);
+  border-radius: 20px;
+  margin: 10px auto;
+  min-height: 100px;
+  padding: 25px;
+  width: 80%;
+}
+
+.header-menu,
+.icon-menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.header-menu {
+  .button {
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.button {
+  appearance: none;
+  background-color: $base-color;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($base-color, 20%);
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $base-color;
+    }
+  }
+}
+
+.irregular {
+  width: 98%;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisibile {
+  opacity: 0;
+}
+
+.grey-text {
+  color: $gray;
+  margin: 0 10px;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.large {
+  font-size: 1.25em;
+}
+
+.medium {
+  font-size: 1em;
+}
+
+.small {
+  font-size: .75em;
+}
+
+.regular {
+  border-radius: .5em;
+}
+
+.square {
+  border-radius: .25em;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.round {
+  border-radius: 1.25em;
+}
+
+.dark {
+  background: $night;
+}
+
+.light {
+  background: $slate;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.green {
+  background-color: $green;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.white {
+  background-color: $white;
+}
+
+.grey {
+  background-color: $grey;
+}
+
+.black {
+  background-color: $black;
+}

@@ -1,0 +1,251 @@
+/*---------------------------
+    Variables
+-----------------------------*/
+
+// Typography
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local('.SFNSText-Light'), local('-apple-system'), local('BlinkMacSystemFont'), local('.HelveticaNeueDeskInterface-Light'), local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'), local('Roboto-Light'), local('DroidSans'), local('Tahoma');
+}
+
+$base-font-family: system;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+
+$base-font-size: 1em;
+
+// Line height
+
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+//  Sizes
+
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+
+$black: #000;
+$blackish: #111;
+$midnight: #030303;
+$white: #fff;
+$shades: #eee;
+$base: #333;
+$gray: #808080;
+$blue: #1565c0;
+$purp: #5f4d93;
+$mix: #935d8c;
+$dusk: #262730;
+$peach: #e37682;
+$red: #d8452e;
+$ruby: #ed3e44;
+$crimson: #dc143c;
+$blood: #f14c2e;
+$fresh-blue: #4481eb;
+$fresh-sky: #04befe;
+$indigo: #5c6bc0;
+$bright: #00c6ff;
+$bright-blue: #0cc;
+$ocean: #1b1b26;
+$deepsea: #2f3242;
+$mercury: #2b303b;
+$dusk: #262730;
+$night: #353740;
+$navy: #3f3f42;
+$mint: #10a233;
+$led: #108b17;
+$grass: #21ba45;
+$green: #65b73c;
+$sky: #4cbeff;
+$grey: #bdbdbd;
+$space-grey: #909090;
+$clean: #ddd;
+$slate: #bbb;
+$coal: #282828;
+$ash: #646464;
+$screen: #2a2a2a;
+$bland: #2e2e2e;
+$charcoal: #26272c;
+$yellow: #fee902;
+$purple: #632286;
+$light-blue: #4cbeff;
+$cream: #f5f5f5;
+$flat: #efefef;
+$border: #4a4a4a;
+$pencil: #757575;
+$mca-purple: #46065c;
+$mca-magenta: #822a85;
+$mca-red: #b82837;
+$mca-orange: #f37021;
+$mca-yellow: #fdb933;
+$mca-green: #50b848;
+$mca-blue: #007196;
+$neon-blue: #268bd2;
+$neon-purple: #7229d1;
+$dodgerblue: #1e90ff;
+$alt-blue: #24466d;
+$brand-color: #2b3542;
+$alt-brand: #007299;
+$deep-blue: #4cbeff;
+$mid-base: #5f6975;
+$mid-color: #4b545f;
+$brand-blue: #1e90ff;
+$brand-white: #f1f1f1;
+$sky-blue: #00bfff;
+$alt-grey: #4a4b4a;
+$dark-gray: #1b1c1d;
+$medium-gray: #999;
+$gainsboro: #dcdcdc;
+$light-gray: #efefef;
+$button-back: #404040;
+$button-dark: #171717;
+
+$clear-grey: rgba(60, 60, 60, .2);
+$clear-black: rgba(66, 66, 66, .1);
+$clear-white: rgba(255, 255, 255, .2);
+$light-grey: rgba(0, 0, 0, .2);
+$translucent: rgba(0, 0, 0, .5);
+$light-black: rgba(0, 0, 0, .7);
+
+$dark-grey: darken($grey, 40%);
+$header: darken($charcoal, 5%);
+$light-yellow: lighten($yellow, 5%);
+$dark-yellow: darken($yellow, 15%);
+$light-blue: lighten($blue, 5%);
+$dark-blue: darken($brand-blue, 25%);
+$dodge-blue: darken($brand-blue, 45%);
+$dark-ocean: darken($blue, 25%);
+
+
+$color-base: #fff;
+$color-accent: #00b6e3;
+
+$nav-border: $alt-grey $black $black $black;
+$base-border: $black $black $alt-grey $black;
+
+// Shadows
+
+$deep-shadow: inset 1px 3px 4px 4px rgba(187, 187, 187, .35);
+$light-shadow: 0 0 9px rgba(0, 0, 0, .15);
+$block-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+$shadow-text: 1px 1px 0 rgba(0, 0, 0, .6);
+$shadow-box: inset 0 1px 0 0 rgba(187, 187, 187, .35);
+$nav-box: 0 3px 9px rgba(0, 0, 0, .35);
+$header-shade: 0 0 5px rgba($black, .15);
+$light-shadow: 0 0 9px rgba($black, .15);
+$shadow-text: 0 0 6px rgba($black, .3);
+$shadow-box: inset 0 1px 0 0 rgba($slate, .35);
+$nav-box: 0 3px 9px rgba($black, .35);
+$full-box: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+
+
+// Gradients
+
+$gradient: linear-gradient(to bottom, $light-blue, $dark-blue);
+$yellow-gradient: linear-gradient(to bottom, $light-yellow, $dark-yellow);
+$dark-grad: linear-gradient(to bottom, $coal 0, $ash 100%);
+$mid-grad: linear-gradient(top, $mid-color 0%, $mid-base 40%);
+$light-grad: linear-gradient(top, $flat 0%, $slate 100%);
+$blue-grad: linear-gradient(top, $alt-brand 0%, $alt-blue 100%);
+$skyblue-grad: linear-gradient(top, $brand-blue 0%, $sky-blue 100%);
+$light-grad: linear-gradient(top, $flat 0%, $slate 100%);
+$pitch-grad: linear-gradient(to top, $ash 0, $coal 100%);
+$dark-grad: linear-gradient(to bottom, $ash 0, $coal 100%);
+$mid-grad: linear-gradient(top, $mid-color 0%, $mid-base 40%);
+
+// Font Colors
+
+$base-font-color: $dark-gray;
+$base-color: $blue;
+
+// Border
+
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+
+$base-background-color: $white;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+
+$form-box-shadow: inset 0 1px 3px rgba($black, .06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($base-color, $lightness: -5%, $alpha: -.3);
+
+// Animations
+
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Mixins
+
+@mixin scroll-nav {
+  box-shadow: 0 2px 9px $light-black;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  margin: auto 5px;
+  padding: 18px;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: darken($foreground-color, 50%)) {
+  ::-webkit-scrollbar {
+    height: $size;
+    width: $size;
+  }
+
+  ::-webkit-scrollbar {
+    height: $size;
+    width: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+}
+
+@mixin stack {
+  box-shadow: 4px -4px 0 2px rgba($white, .1), 15px -12px 0 2px rgba($slate, .1);
+}
+
+@mixin stack-hover {
+  border: 1px solid $sky;
+  box-shadow: 8px -8px 0 1px rgba($white, .3), 17px -13px 0 3px rgba($white, .3);
+}
+
+@mixin hr-fade ($direction, $color, $background) {
+  border-image: linear-gradient(to $direction, $color 0%, $background 100%);
+  border-image-slice: 1;
+}
+
+@mixin glow ($color, $size) {
+  box-shadow: 0 0 2px $size $color;
+  transition: .3s ease-out;
+}
+
+@mixin blue-glow {
+  border: 1px solid $sky;
+  box-shadow: (0 0 5px rgba($sky, 1));
+  transition: .3s ease-out;
+}
+
+@mixin green-glow {
+  box-shadow: 0 0 2px 4px $mint;
+  transition: .3s ease-out;
+}
+
+@mixin floating {
+  box-shadow: (0 0 5px 4px rgba($black, .2));
+}

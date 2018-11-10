@@ -1,0 +1,132 @@
+.profile-area, .profile-post-area {
+  padding: 3rem;
+  text-align: center;
+  margin: auto;
+
+  .avatar {
+    height: 150px;
+    width: 150px;
+    background: $grey;
+    border-radius: 50%;
+    border: 4px solid $white;
+    z-index: 1;
+  }
+
+  .content {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1.4em;
+  }
+}
+
+.profile-info-area {
+  text-align: left;
+  padding: 40px;
+  border: 1px solid $grey;
+  margin: 20px;
+}
+
+.social-description {
+  display: inline-block;
+  max-width: 150px;
+  width: 145px;
+  text-align: center;
+  margin: 15px 0 0;
+
+  h2 {
+    font-size: 2.5em;
+    margin: 0 0 15px;
+  }
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo , .dropdown {
+  width: 100px;
+
+  svg , img {
+    display: block;
+    width: auto;
+    height: 60px;
+    margin: 0 auto;
+  }
+}
+
+.nav-avatar {
+  cursor: pointer;
+  display: block;
+  margin: .4rem .8rem .1rem 1.3rem;
+
+  img {
+    min-width: 51px;
+    height: 51px;
+    border-radius: 10%;
+    background: $grey;
+  }
+}
+
+.user-menu-wrap {
+  position: relative;
+}
+
+
+.menu-container {
+  visibility: hidden;
+  opacity: 0;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease-in-out;
+  }
+}
+
+.user-menu {
+  background-color: $white;
+  border: 1px solid $slate;
+  border-radius: 4px;
+  margin-top: 10px;
+  position: absolute;
+  right: -5px;
+  width: 120px;
+  z-index: 10;
+
+  .user-menu-link {
+    border-top: 1px solid $grey;
+    color: $ocean;
+    display: block;
+    padding: 10px 15px;
+
+    &:hover {
+      background-color: $blue;
+      color: $slate;
+      transition: .1s ease-in;
+    }
+  }
+
+  &::before,
+  &::after {
+    border: 8px solid transparent;
+    border-bottom-color: $slate;
+    content: "";
+    display: inline-block;
+    left: 73px;
+    position: absolute;
+    top: -14px;
+  }
+}
