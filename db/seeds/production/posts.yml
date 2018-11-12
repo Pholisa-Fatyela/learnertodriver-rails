@@ -1,0 +1,61 @@
+records:
+  - sprig_id: 1
+    title: '<%= Faker::TheFreshPrinceOfBelAir.character %>'
+    content: '<%= Faker::TheFreshPrinceOfBelAir.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 1).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 2
+    title: '<%= Faker::Seinfeld.character %>'
+    content: '<%= Faker::Seinfeld.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 1).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 3
+    title: '<%= Faker::FamilyGuy.character %>'
+    content: '<%= Faker::FamilyGuy.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 1).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 4
+    title: '<%= Faker::Friends.character %>'
+    content: '<%= Faker::Friends.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 2).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 5
+    title: '<%= Faker::HowIMetYourMother.character %>'
+    content: '<%= Faker::HowIMetYourMother.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 2).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 6
+    title: '<%= Faker::HeyArnold.character %>'
+    content: '<%= Faker::HeyArnold.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 2).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 7
+    title: '<%= Faker::RickAndMorty.character %>'
+    content: '<%= Faker::RickAndMorty.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 3).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 8
+    title: '<%= Faker::VentureBros.character %>'
+    content: '<%= Faker::VentureBros.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 3).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 9
+    title: '<%= Faker::TwinPeaks.character %>'
+    content: '<%= Faker::TwinPeaks.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 3).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'
+  - sprig_id: 10
+    title: '<%= Faker::Simpsons.character %>'
+    content: '<%= Faker::Simpsons.quote %> <br> <cite>quote may or may not match character in title</cite>'
+    user_id: '<%= sprig_record(User, 4).id %>'
+    created_at: '<%= Faker::Date.backward(100) %>'
+    updated_at: '<%= Faker::Date.backward(100) %>'

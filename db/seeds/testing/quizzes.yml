@@ -1,0 +1,13 @@
+records:
+  - sprig_id: 1
+    title: 'Heavy Motor Vehicle'
+    kind: 'truck'
+    info: 'An online mock test for light motor vehicles.'
+  - sprig_id: 2
+    title: 'Light Motor Vehicle'
+    kind: 'car'
+    info: 'An online mock test for light motor vehicles.'
+  - sprig_id: 3
+    title: 'Motorcycle'
+    kind: 'bike'
+    info: 'An online mock test for light motor vehicles.'
