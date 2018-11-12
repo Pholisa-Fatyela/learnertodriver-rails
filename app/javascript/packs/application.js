@@ -9,8 +9,8 @@
 
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import Dropdown from '../dropdown.vue'
 import Rails from 'rails-ujs'
+import Dropdown from '../dropdown.vue'
 
 Rails.start()
 
@@ -19,7 +19,7 @@ Vue.use(TurbolinksAdapter)
 Vue.component('dropdown', Dropdown)
 
 document.addEventListener('DOMContentLoaded', () => {
-   // Setup headers of X-CSRF-Token that it grabs from rails generated token in meta tag.
+  // Setup headers of X-CSRF-Token that it grabs from rails generated token in meta tag.
   // axios.defaults.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
 
   const app = new Vue({
