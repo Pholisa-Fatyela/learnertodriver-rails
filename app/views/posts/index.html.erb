@@ -1,8 +1,8 @@
-<% breadcrumb :root %>
+<% breadcrumb :posts, @posts %>
 
 <div class="wrapper">
 
-  <div class="posts" id="posts" data-columns >
+  <div class="posts" id="posts" >
     <%= render :partial => @posts %>
   </div>
   <div class="pagination-container">
