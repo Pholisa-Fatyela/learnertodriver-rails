@@ -1,3 +1,3 @@
 class PagesController < ApplicationController
-  config.content_path = '/'
+  config.content_path = 'home'
 end
