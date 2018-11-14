@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   resources :users
   resources :quizzes
   resources :comments, only: :index
+  resources :questions, only: :index
 
 end

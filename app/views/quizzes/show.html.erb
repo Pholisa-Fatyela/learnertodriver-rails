@@ -8,43 +8,19 @@
           </div>
         </div>
 
+          <div class="quiz-area">
 
-          <div class="app">
-            <h1>Heading</h1>
-            <!-- index is used to check with current question index -->
-              <!-- Hide all questions, show only the one with index === to current question index -->
-              <div>
-                <h2>Question</h2>
-                <ol>
-                  <li>
-                    <label>
-                      <!-- The radio button has three new directives -->
-                      <!-- v-bind:value sets "value" to "true" if the response is correct -->
-                      <!-- v-bind:name sets "name" to question index to group answers by question -->
-                      <!-- v-model creates binding with userResponses -->
-                      <input type="radio"> Answer
-                    </label>
-                  </li>
-                </ol>
-                <!-- The two navigation buttons -->
-                <!-- Note: prev is hidden on first question -->
-                <button>
-                  prev
-                </button>
-                <button>
-                  next
-                </button>
-              </div>
-            <div >
-              <h2>
-              Quiz finished
-            </h2>
-              <p>
-                Total score: 
-              </p>
-            </div>
+          <% if @quiz.questions.any? %>
+            <%= render :partial => @quiz.questions %>
+          <% else %>
+
+          <div class="message">
+            <h1>No Quizzes for this topic yet</h1>
           </div>
 
+          <% end %>
+
+          </div>
 
         </div>
       </div>
