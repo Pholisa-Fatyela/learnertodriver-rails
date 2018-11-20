@@ -66,15 +66,15 @@
       <% else %>
 
         <div class="header-links">
-
-          <%= link_to new_user_registration_path, class: 'nav-link' do %>
-            Register
-          <% end %>
-          
-          <span class="grey-text">or</span>
           
           <%= link_to new_user_session_path, class: 'nav-link' do %>
-            Log in
+            Sign In
+          <% end %>
+ 
+          <span class="grey-text">or</span>
+          
+          <%= link_to new_user_registration_path, class: 'nav-link outline' do %>
+            Sign Up
           <% end %>
 
         </div>
