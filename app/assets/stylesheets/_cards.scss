@@ -4,7 +4,7 @@
 
 .card {
   background: $white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+  box-shadow: $header-shade;
   display: flex;
   flex-wrap: wrap;
   margin: .9rem auto;
@@ -46,6 +46,10 @@
 
 .card-header {
   border-bottom: 1px solid $grey;
+
+  a {
+    color: $night;
+  }
 }
 
 .card-content {
