@@ -1,18 +1,14 @@
 <%= div_for(question) do %>
   <div class="quiz-area">
-    <h2>Question #</h2>
-      <ol>
-        <li><label for="">Option<input type="radio"></label></li>
-        <li><label for="">Option<input type="radio"></label></li>
-        <li><label for="">Answer<input type="radio"></label></li>
-        <li><label for="">Option<input type="radio"></label></li>
-      </ol>
-      <!-- start question pagination -->
-      <button>Next</button>
-      <button>Previous</button>
-      <button>Submit</button>
-      <button>Restart</button>
-      <!-- end question pagination -->
+    <h1>Question <%= question.id %></h1>
+    <h2><%= question.content %></h2>
+
+    <form>
+      <input type="radio" name="gender" value="male"><%= question.option1 %><br>
+      <input type="radio" name="gender" value="female"><%= question.option2 %><br>
+      <input type="radio" name="gender" value="other"><%= question.option3 %><br>  
+      <input type="submit" value="Submit">
+    </form>
 
   </div>
 <% end %>
