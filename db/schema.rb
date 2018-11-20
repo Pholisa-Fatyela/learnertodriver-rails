@@ -57,7 +57,9 @@ ActiveRecord::Schema.define(version: 2018_11_12_202516) do
 
   create_table "questions", force: :cascade do |t|
     t.string "content"
-    t.string "option"
+    t.string "option1"
+    t.string "option2"
+    t.string "option3"
     t.string "answer"
     t.bigint "quiz_id"
     t.datetime "created_at", null: false
@@ -69,6 +71,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_202516) do
     t.string "title"
     t.string "info"
     t.string "kind"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
