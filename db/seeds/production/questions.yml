@@ -4,6 +4,8 @@ records:
     option1: "Longer if the vehicle is traveling at a higher speed."
     option2: "Longer on a wet road than on a dry road"
     option3: "Longer if the vehicle is loaded."
+    explanation: "<%= Faker::GameOfThrones.quote %>"
+    image_url: "<%= Faker::LoremPixel.image %>"
     quiz_id: "<%= sprig_record(Quiz, 1).id %>"
     answer: "1"
   - sprig_id: 2
@@ -11,6 +13,8 @@ records:
     option1: "If the road is clear for a long distance and can be done so without obstructing traffic."
     option2: "In any manner as long as you use your indicator in time."
     option3: " If the road is clear of traffic for a short distance."
+    explanation: "<%= Faker::GameOfThrones.quote %>"
+    image_url: "<%= Faker::LoremPixel.image %>"
     quiz_id: "<%= sprig_record(Quiz, 1).id %>"
     answer: "1"
   - sprig_id: 3
@@ -18,5 +22,7 @@ records:
     option1: "60"
     option2: "45"
     option3: "30"
+    explanation: "<%= Faker::GameOfThrones.quote %>"
+    image_url: "<%= Faker::LoremPixel.image %>"
     quiz_id: "<%= sprig_record(Quiz, 1).id %>"
     answer: "3"
