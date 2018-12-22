@@ -41,4 +41,6 @@ en:
       truncate: "..."
   contact_mailer:
     feedback:
-      subject: "Contact Mailer"
+      subject: "New Message"
+      greeting: "Hi %{username},"
+      content: "%{username} is now following you!"
