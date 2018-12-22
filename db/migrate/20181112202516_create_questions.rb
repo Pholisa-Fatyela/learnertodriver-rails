@@ -5,8 +5,9 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
       t.string :option1
       t.string :option2
       t.string :option3
+      t.string :image_url
+      t.string :explanation
       t.string :answer
-      t.references :quiz, foreign_key: true
 
       t.timestamps
     end
