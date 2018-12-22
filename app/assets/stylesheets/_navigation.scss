@@ -90,7 +90,7 @@
 
     &:hover {
       background: $base;
-      border-bottom: 2px solid $blue;
+      border-bottom: 2px solid $sky;
       color: $white;
     }
 
@@ -123,7 +123,29 @@
 .outline {
   border: 1px solid;
   border-radius: 4px;
-  padding: .2rem .6rem;
+  padding: .4rem .8rem;
+  transition-property: background-color, color;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background: $sky;
+    color: $white;
+  }
+}
+
+.noline {
+  border: 1px $gray;
+  border-radius: 4px;
+  padding: .4rem .8rem;
+  transition-property: background-color, color;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background: $gainsboro;
+    color: $button-dark;
+  }
 }
 
 .header-links {

@@ -132,7 +132,27 @@
 }
 
 @media screen and (max-width: 540px) {
+
+  .application-footer {
+    padding: .3rem;
+
+    .group {
+      flex-basis: 100%;
+      margin-bottom: 1.3rem;
+      margin-right: 1.3rem;
+    }
+
+    .copyright {
+      margin: 1.2rem;
+    }
+  }
+
   .footer-groups {
     flex-direction: column;
   }
+
+  .block {
+    text-align: center;
+  }
+
 }
