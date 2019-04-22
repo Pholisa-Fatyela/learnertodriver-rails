@@ -34,7 +34,7 @@
   </div>
 
   <div class="copyright">
-    <p>Created with ❤ by <strong>© <%= t("current_year") %> <a href="https://typographics.co.za"><%= t("dev_company") %>.</a></strong></p>
+    <p>Created with ❤ by <strong><a href="https://typographics.co.za"><%= t("dev_company") %> © </a></strong><%= Date.today.year %></p>
     <ul>
 
       <li><%= link_to 'Privacy Policy', page_path('company/privacy') %></li>
