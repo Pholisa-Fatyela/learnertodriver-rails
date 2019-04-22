@@ -1,45 +1,45 @@
 records:
   - sprig_id: 1
-    username: '<%= Faker::Name.last_name %>'
-    first_name: '<%= Faker::Name.first_name %>'
-    last_name: '<%= Faker::Name.last_name %>'
-    email: 'simpsons@google.com'
-    password: 'admin1234'
-    admin: '<%= Faker::Boolean.boolean(0.2) %>'
-    slug: '<%= Faker::Name.last_name %>'
-    bio: '<%= Faker::Simpsons.quote %>'
-    birthday: '<%= Faker::Date.birthday(18, 65) %>'
-    confirmed_at: '<%= Faker::Date.backward(14) %>'
+    username: "<%= Faker::Name.last_name %>"
+    first_name: "<%= Faker::Name.first_name %>"
+    last_name: "<%= Faker::Name.last_name %>"
+    email: "admin@admin.com"
+    password: "admin1234"
+    admin: "<%= Faker::Boolean.boolean(0.2) %>"
+    slug: "<%= Faker::Name.last_name %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
+    birthday: "<%= Faker::Date.birthday(18, 65) %>"
+    confirmed_at: "<%= Faker::Date.backward(14) %>"
   - sprig_id: 2
-    username: '<%= Faker::Name.last_name %>'
-    first_name: '<%= Faker::Name.first_name %>'
-    last_name: '<%= Faker::Name.last_name %>'
-    email: 'freshprince@google.com'
-    password: 'admin1234'
-    admin: '<%= Faker::Boolean.boolean(0.2) %>'
-    slug: '<%= Faker::Name.last_name %>'
-    bio: '<%= Faker::Simpsons.quote %>'
-    birthday: '<%= Faker::Date.birthday(18, 65) %>'
-    confirmed_at: '<%= Faker::Date.backward(14) %>'
+    username: "<%= Faker::Name.last_name %>"
+    first_name: "<%= Faker::Name.first_name %>"
+    last_name: "<%= Faker::Name.last_name %>"
+    email: "freshprince@google.com"
+    password: "admin1234"
+    admin: "<%= Faker::Boolean.boolean(0.2) %>"
+    slug: "<%= Faker::Name.last_name %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
+    birthday: "<%= Faker::Date.birthday(18, 65) %>"
+    confirmed_at: "<%= Faker::Date.backward(14) %>"
   - sprig_id: 3
-    username: '<%= Faker::Name.last_name %>'
-    first_name: '<%= Faker::Name.first_name %>'
-    last_name: '<%= Faker::Name.last_name %>'
-    email: 'familyguy@google.com'
-    password: 'admin1234'
-    admin: '<%= Faker::Boolean.boolean(0.2) %>'
-    slug: '<%= Faker::Name.last_name %>'
-    bio: '<%= Faker::Simpsons.quote %>'
-    birthday: '<%= Faker::Date.birthday(18, 65) %>'
-    confirmed_at: '<%= Faker::Date.backward(14) %>'
+    username: "<%= Faker::Name.last_name %>"
+    first_name: "<%= Faker::Name.first_name %>"
+    last_name: "<%= Faker::Name.last_name %>"
+    email: "familyguy@google.com"
+    password: "admin1234"
+    admin: "<%= Faker::Boolean.boolean(0.2) %>"
+    slug: "<%= Faker::Name.last_name %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
+    birthday: "<%= Faker::Date.birthday(18, 65) %>"
+    confirmed_at: "<%= Faker::Date.backward(14) %>"
   - sprig_id: 4
-    username: '<%= Faker::Name.last_name %>'
-    first_name: '<%= Faker::Name.first_name %>'
-    last_name: '<%= Faker::Name.last_name %>'
-    email: 'howimetyourmother@google.com'
-    password: 'admin1234'
-    admin: '<%= Faker::Boolean.boolean(0.2) %>'
-    slug: '<%= Faker::Name.last_name %>'
-    bio: '<%= Faker::Simpsons.quote %>'
-    birthday: '<%= Faker::Date.birthday(18, 65) %>'
-    confirmed_at: '<%= Faker::Date.backward(14) %>'
+    username: "<%= Faker::Name.last_name %>"
+    first_name: "<%= Faker::Name.first_name %>"
+    last_name: "<%= Faker::Name.last_name %>"
+    email: "howimetyourmother@google.com"
+    password: "admin1234"
+    admin: "<%= Faker::Boolean.boolean(0.2) %>"
+    slug: "<%= Faker::Name.last_name %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
+    birthday: "<%= Faker::Date.birthday(18, 65) %>"
+    confirmed_at: "<%= Faker::Date.backward(14) %>"

@@ -7,7 +7,7 @@ records:
     password: "admin1234"
     admin: "<%= Faker::Boolean.boolean(0.2) %>"
     slug: "<%= Faker::Name.last_name %>"
-    bio: "<%= Faker::Simpsons.quote %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
     birthday: "<%= Faker::Date.birthday(18, 65) %>"
     confirmed_at: "<%= Faker::Date.backward(14) %>"
   - sprig_id: 2
@@ -18,7 +18,7 @@ records:
     password: "admin1234"
     admin: "<%= Faker::Boolean.boolean(0.2) %>"
     slug: "<%= Faker::Name.last_name %>"
-    bio: "<%= Faker::Simpsons.quote %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
     birthday: "<%= Faker::Date.birthday(18, 65) %>"
     confirmed_at: "<%= Faker::Date.backward(14) %>"
   - sprig_id: 3
@@ -29,7 +29,7 @@ records:
     password: "admin1234"
     admin: "<%= Faker::Boolean.boolean(0.2) %>"
     slug: "<%= Faker::Name.last_name %>"
-    bio: "<%= Faker::Simpsons.quote %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
     birthday: "<%= Faker::Date.birthday(18, 65) %>"
     confirmed_at: "<%= Faker::Date.backward(14) %>"
   - sprig_id: 4
@@ -40,6 +40,6 @@ records:
     password: "admin1234"
     admin: "<%= Faker::Boolean.boolean(0.2) %>"
     slug: "<%= Faker::Name.last_name %>"
-    bio: "<%= Faker::Simpsons.quote %>"
+    bio: "<%= Faker::TvShows::Simpsons.quote %>"
     birthday: "<%= Faker::Date.birthday(18, 65) %>"
     confirmed_at: "<%= Faker::Date.backward(14) %>"
