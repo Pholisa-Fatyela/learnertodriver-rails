@@ -1,7 +1,7 @@
 <% content_for :page_title, @post.title %>
 <% breadcrumb :post, @post %>
 
-<article class="post">
+<article class="post content">
 
   <div class="post-header">
     <h1 class="post-title" itemprop="name headline">
@@ -46,14 +46,19 @@
 
       <div class="post-author-content">
 
-          <div class="author-avatar">
-            <%= image_tag gravatar_url(@post.user.email, :size=> 300), alt: 'profile', class: "avatar" %>
+          <div class="author avatar">
+            <%= image_tag gravatar_url(@post.user.email, :size=> 300), alt: 'profile', class: "author avatar" %>
           </div>
-          <div class="author-username">
+          <div class="author username">
             <h4><%= link_to @post.user.username, user_path(@post.user) %></h4>
           </div>
-          <div class="author-bio">
+          <div class="author bio">
             <p><%= @post.user.bio %></p>
+          </div>
+          <div class="author social">
+            <p>T</p>
+            <p>F</p>
+            <p>M</p>
           </div>
 
       </div>
@@ -62,7 +67,7 @@
   </div>
 
 
-<article class="comments">
+<article class="comments content">
   <div class="comments-title-container">
     <h2 class="comments-title fleft"><%= @post.comments.count %> Comments</h2>
     <div class="clear"></div>

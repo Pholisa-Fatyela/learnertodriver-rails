@@ -1,3 +1,113 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+
+  .block {
+    margin: 1.2rem;
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+.post {
+
+  &.content {
+    padding: 1.4rem 0;
+  }
+}
+
 .blog-card {
   width: 30%;
+}
+
+.post-header {
+  border-bottom: 1px solid $shades;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.post-title {
+  font-weight: 600;
+  margin: .4rem 1.8rem;
+
+  a {
+    color: $ocean;
+  }
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-meta-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: $gainsboro;
+}
+
+.block-meta {
+  border-top: 1px solid $gainsboro;
+  display: flex;
+  padding: .8rem;
+  justify-content: space-around;
+
+  .meta {
+    margin: 0 .2rem;
+    white-space: nowrap;
+  }
+}
+
+.pagination {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: $nav-box;
+  display: inline-block;
+  margin: 2rem auto;
+
+  .current {
+    background-color: $blue;
+    color: $white;
+    float: left;
+    padding: 8px 16px;
+  }
+
+  a {
+    color: $blue;
+    float: left;
+    padding: 8px 16px;
+
+    &:hover {
+      background-color: $gainsboro;
+    }
+  }
+
+  span {
+    color: $midnight;
+    float: left;
+    border: 1px solid $gainsboro;
+
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+}
+
+.author {
+  img {
+    border: 8px solid $white;
+    border-radius: 50%;
+    width: 100px;
+  }
+
+  h4 {
+    text-transform: uppercase;
+  }
 }

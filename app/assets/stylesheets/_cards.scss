@@ -1,5 +1,6 @@
 .cards {
   display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -7,7 +8,7 @@
   box-shadow: $header-shade;
   display: flex;
   flex-wrap: wrap;
-  margin: .9rem auto;
+  margin: .4rem 1.2rem;
   max-width: 361px;
 
   h2 {
