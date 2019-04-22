@@ -9,8 +9,8 @@ gem 'rails'
 gem 'pg'
 # Use Phusion Passenger as the app server
 gem 'passenger'
-# Use SCSS for stylesheets
-gem 'sassc-rails'
+# Ruby on Rails stylesheet engine for Sass
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -176,8 +176,8 @@ group :test do
   gem 'capybara'
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # Run Selenium tests more easily with automatic installation and updates for all supported webdrivers.
+  gem 'webdrivers'
 end
 
 # ### ### ### ### ### ### ### ###
