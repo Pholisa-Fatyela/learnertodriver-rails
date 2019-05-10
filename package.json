@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
+    "apexcharts": "^3.6.9",
     "rails-ujs": "^5.2.3",
     "turbolinks": "^5.2.0"
   },
