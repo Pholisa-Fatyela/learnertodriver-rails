@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_163413) do
+ActiveRecord::Schema.define(version: 2019_05_18_221011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,18 +55,25 @@ ActiveRecord::Schema.define(version: 2018_12_05_163413) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "questions", force: :cascade do |t|
+  create_table "question_options", force: :cascade do |t|
     t.string "content"
-    t.string "option1"
-    t.string "option2"
-    t.string "option3"
-    t.string "image_url"
     t.string "explanation"
-    t.string "answer"
+    t.boolean "correct", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quiz_question_id"
+    t.index ["quiz_question_id"], name: "index_question_options_on_quiz_question_id"
+  end
+
+  create_table "quiz_questions", force: :cascade do |t|
+    t.string "content"
+    t.string "explanation"
+    t.string "level"
+    t.boolean "draft"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quiz_id"
-    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+    t.index ["quiz_id"], name: "index_quiz_questions_on_quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|

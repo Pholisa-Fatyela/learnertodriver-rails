@@ -1,7 +1,7 @@
-<%= div_for(question) do %>
+<%= div_for(quiz_question) do %>
   <div class="quiz-area">
-    <h1>Question <%= question.id %></h1>
-    <h2><%= question.content %></h2>
+    <h1>Question <%= quiz_question.id %></h1>
+    <h2><%= quiz_question.content %></h2>
 
     <form>
       <input type="radio" name="gender" value="male"><%= question.option1 %><br>
