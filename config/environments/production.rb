@@ -25,7 +25,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Fallback to assets pipeline if a precompiled asset is missed.
@@ -93,4 +93,32 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+ #CHANGED - Devise - Added :confirmable to Devise using http://mailgun.com
+  config.action_mailer.default_url_options = { host: ENV["HEROKU_URL"] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+     :address => ENV["EMAIL_SERVICE_SMTP"],
+     :port => 587,
+     :user_name => ENV["EMAIL_SERVICE_USER"],
+     :password => ENV["EMAIL_SERVICE_PASS"],
+     :authentication => :plain,
+     :enable_starttls_auto => true
+  }
+
+  # Memcachier / dalli configuration
+  # https://elements.heroku.com/addons/memcachier
+  config.cache_store = :dalli_store,
+    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+    {:username => ENV["MEMCACHIER_USERNAME"],
+      :password => ENV["MEMCACHIER_PASSWORD"],
+      :failover => true,
+      :socket_timeout => 1.5,
+      :socket_failure_delay => 0.2,
+      :down_retry_delay => 60
+    }
+  
 end
