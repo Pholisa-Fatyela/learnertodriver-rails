@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  before_save :parameterize_slug
+  before_save :create_name, :create_username
 
   extend FriendlyId
-    friendly_id :name, use: :slugged
+    friendly_id :username, use: :slugged
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -16,8 +16,18 @@ class User < ApplicationRecord
 
   acts_as_voter
 
+  def should_generate_new_friendly_id?
+    slug.nil?  || username_changed?
+  end
+
   private
-    def parameterize_slug
-      self.slug.parameterize
+    def create_name
+      self.first_name = "none" if first_name.blank?
+      self.last_name = "none" if last_name.blank?
+      self.name = "#{first_name} #{last_name}"
+    end
+
+    def create_username
+      self.username = "#{first_name}_#{last_name}".parameterize
     end
 end
