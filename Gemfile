@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -143,7 +143,9 @@ gem 'sanitize'
 # ### ### ### ### ### ### ### ###
 # Testing
 # ### ### ### ### ### ### ### ###
-
+# https://github.com/rubocop-hq/rubocop
+# A Ruby static code analyzer and formatter, based on the community Ruby style guide.
+gem 'rubocop', require: false, groups: [:development, :test]
 # Populate db/seeds.rb with fake data
 # https://github.com/stympy/faker
 gem 'faker'
@@ -194,6 +196,7 @@ gem 'sinatra'
 # https://github.com/rails/record_tag_helper
 gem 'record_tag_helper'
 # https://github.com/lassebunk/gretel
+# https://github.com/wilhall/gretel
 # Flexible Ruby on Rails breadcrumbs plugin.
 gem 'gretel'
 # Easily include static pages
