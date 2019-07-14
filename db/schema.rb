@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_18_221011) do
+ActiveRecord::Schema.define(version: 2019_07_06_154219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string "body"
@@ -55,36 +61,37 @@ ActiveRecord::Schema.define(version: 2019_05_18_221011) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "question_options", force: :cascade do |t|
+  create_table "questions", force: :cascade do |t|
     t.string "content"
-    t.string "explanation"
-    t.boolean "correct", default: false, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "quiz_question_id"
-    t.index ["quiz_question_id"], name: "index_question_options_on_quiz_question_id"
-  end
-
-  create_table "quiz_questions", force: :cascade do |t|
-    t.string "content"
-    t.string "explanation"
     t.string "level"
     t.boolean "draft"
+    t.integer "question_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "quiz_id"
-    t.index ["quiz_id"], name: "index_quiz_questions_on_quiz_id"
+    t.bigint "quiz_id"
+    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
     t.string "title"
     t.string "kind"
     t.string "info"
+    t.integer "duration", default: 3600
+    t.integer "question_count", default: 0
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_quizzes_on_slug", unique: true
+  end
+
+  create_table "responses", force: :cascade do |t|
+    t.bigint "question_id"
+    t.bigint "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answer_id"], name: "index_responses_on_answer_id"
+    t.index ["question_id"], name: "index_responses_on_question_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -104,11 +111,13 @@ ActiveRecord::Schema.define(version: 2019_05_18_221011) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.string "first_name"
     t.string "last_name"
     t.string "username"
     t.text "bio"
     t.date "birthday"
+    t.integer "user_count", default: 0
     t.boolean "admin", default: false, null: false
     t.string "slug"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
@@ -133,4 +142,7 @@ ActiveRecord::Schema.define(version: 2019_05_18_221011) do
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "questions", "quizzes"
+  add_foreign_key "responses", "answers"
+  add_foreign_key "responses", "questions"
 end
