@@ -1,7 +1,7 @@
 <div class="grid-item card">
   <div class="card-image">
     <%= link_to quiz_path(quiz), class: "image" do %>
-      <%= image_tag("cards/#{quiz.kind}.jpeg") %>
+      <%= image_tag("cards/#{ quiz.kind }.jpeg") %>
     <% end %>
   </div>
     <div class="card-content">
@@ -11,11 +11,17 @@
     </div>
     
     <div class="card-copy">
-     <p class="item-description"><%= quiz.info.truncate(165).html_safe %></p>
+      <p class="item-description">
+        <%= quiz.info.truncate(165).html_safe %>
+      </p>
+      
+      <p class="item-meta">
+        <%= distance_of_time_in_words(quiz.duration) %>
+      </p>
     </div>
       
       <div class="cta">
-        <%= link_to quiz_path(quiz), class: 'full dark button' do %> Practice Quiz <% end %>  
+        <%= link_to quiz_path(quiz), class: 'full dark button' do %> Practice Quiz <% end %>
       </div>
 
     </div>

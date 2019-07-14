@@ -12,15 +12,16 @@
 
         <div class="quiz-area">
 
-          <% if @quiz.quiz_questions.any? %>
+          <% if @questions.any? %>
 
             <div class="timer-area">
               <div id="progressbar">
                 <div id="progress"></div>
               </div>
             </div>
-            
-            <%= render :partial => @quiz.quiz_questions %>
+
+            <%= render :partial => @questions %>
+
           <% else %>
 
           <div class="message">

@@ -1,4 +1,4 @@
-<% if current_user -%>
+<% if current_user %>
 
   <div class="landing">
 
@@ -6,6 +6,13 @@
 
       <h1>Landing logged in</h1>
       <p>Dashboard about recent quizzes</p>
+      
+      <h2>Posts:</h2>
+        <% if current_user.posts %>
+          <p><%= current_user.posts.count %></p>
+        <% else %>
+        <p>No posts yet</p>
+        <% end %>
     </div>
   </div>
 
