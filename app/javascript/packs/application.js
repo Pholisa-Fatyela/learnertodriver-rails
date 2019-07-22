@@ -10,3 +10,6 @@
 import Rails from 'rails-ujs'
 
 Rails.start()
+
+require("trix")
+require("@rails/actiontext")
