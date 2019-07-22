@@ -255,7 +255,7 @@ gem 'dalli', groups: [:production]
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
 
-# gem 'administrate'
+gem 'administrate'
 gem 'friendly_id'
 gem 'acts_as_votable'
 gem 'bourbon'
