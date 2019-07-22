@@ -27,19 +27,7 @@
 #   'true': 'foo'
 #
 # To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_name: "Learner to Driver"
-  tagline: "Practice the South African Learners Test"
-  dev_company: "TypoGraphics"
-  views:
-    pagination:
-      previous: "&lt; Previous"
-      next: "Next &gt;"
-      truncate: "..."
-  contact_mailer:
-    feedback:
-      subject: "New Message"
-      greeting: "Hi %{username},"
-      content: "%{username} is now following you!"
+  hello: "Hello world"
