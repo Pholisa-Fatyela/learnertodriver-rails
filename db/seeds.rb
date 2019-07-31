@@ -1,7 +1,18 @@
-include Sprig::Helpers
+models =  %w( answer question quiz comment post user)
 
-puts "seeds.rb"
+puts "... deleting all existing data 🗑"
 
-puts "cleaned data User, Quiz, Post, Comment, Question"
+models.each { |m|
+  m.camelize.constantize.delete_all
+}
 
-puts "new data seeded"
+# seed_modules
+
+puts "... seeding new data 💾"
+models.reverse.each do |data|
+  require File.expand_path(File.dirname(__FILE__))+"/seeds/modules/#{ data }.rb"
+end
+
+models.each { |m|
+  puts "#{ m.camelize.constantize.count } #{ m.pluralize } created"
+}
