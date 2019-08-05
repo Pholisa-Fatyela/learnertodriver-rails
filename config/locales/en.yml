@@ -27,7 +27,21 @@
 #   'true': 'foo'
 #
 # To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
+# available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  site_name: "LearnertoDriver"
+  tagline: "Get your learners"
+  description: "Learner to Driver website"
+  mission: "The LearnertoDriver app offers the best preparation before taking the official test given by the Traffic Department"
+  dev_company: "TypoGraphics"
+  views:
+    pagination:
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      truncate: "..."
+  contact_mailer:
+    feedback:
+      subject: "New Message"
+      greeting: "Hi %{username},"
+      content: "%{username} is now following you!"
