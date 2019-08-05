@@ -1,0 +1,4 @@
+:schedule:
+  daily_cron:
+    cron: '00 01,13 * * *'   # Runs twice per day
+    class: DailyCron
