@@ -2,12 +2,19 @@
   "name": "learnertodriver-rails",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.0.2",
-    "apexcharts": "^3.6.9",
-    "rails-ujs": "^5.2.3",
-    "turbolinks": "^5.2.0"
+    "@rails/actiontext": "^6.0.0-rc1",
+    "@rails/activestorage": "^6.0.0-alpha",
+    "@rails/ujs": "^6.0.0-alpha",
+    "@rails/webpacker": "^4.0.7",
+    "apexcharts": "^3.8.0",
+    "core-js": "3",
+    "date-fns": "^2.0.0-beta.2",
+    "stimulus": "^1.1.1",
+    "trix": "^1.0.0",
+    "turbolinks": "^5.2.0",
+    "update": "^0.7.4"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": ">=3.7.2"
   }
 }

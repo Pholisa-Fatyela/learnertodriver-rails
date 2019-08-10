@@ -30,8 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_name: "Learner to Driver"
-  tagline: "Practice the South African Learners Test"
+  site_name: "LearnertoDriver"
+  tagline: "Get your learners"
+  description: "Learner to Driver website"
+  mission: "The LearnertoDriver app offers the best preparation before taking the official test given by the Traffic Department"
   dev_company: "TypoGraphics"
   views:
     pagination:

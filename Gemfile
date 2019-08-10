@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '~> 6.0.0.rc2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Phusion Passenger as the app server
@@ -34,7 +34,7 @@ gem 'bcrypt'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', require: false
 
 group :development do
   # Better Error Reporting
@@ -98,12 +98,15 @@ gem 'derailed_benchmarks', group: [:development]
 # ### ### ### ### ### ### ### ###
 # Authentication
 # ### ### ### ### ### ### ### ###
-
-# You may need to request from the source for Rails 5
+# Rails authentication with email & password. https://thoughtbot.com/open-source
+# https://github.com/thoughtbot/clearance
+# gem "clearance"
+# Flexible authentication solution for Rails with Warden.
 # https://github.com/plataformatec/devise
-# Config: config/environments/development.rb
-# Config: config/initializers/devise.rb
 gem 'devise'
+# Simple (but safe) token authentication for Rails apps or API with Devise.
+# https://github.com/gonzalo-bulnes/simple_token_authentication
+# gem 'simple_token_authentication'
 # https://github.com/omniauth/omniauth
 # gem 'omniauth'
 # Facebook OmniAuth Strategy https://github.com/mkdynamic/omniauth-facebook
@@ -151,7 +154,7 @@ gem 'rubocop', require: false, groups: [:development, :test]
 gem 'faker'
 # Relational seeding for Rails apps
 # https://github.com/vigetlabs/sprig
-gem 'sprig'
+# gem 'sprig'
 # Programmatic testing using Rspec
 # https://github.com/rspec/rspec-rails
 gem 'rspec-rails', groups: [:development, :test]
@@ -194,9 +197,11 @@ gem 'simple_form'
 gem 'sinatra'
 # record_tag_helper
 # https://github.com/rails/record_tag_helper
-gem 'record_tag_helper'
-# https://github.com/lassebunk/gretel
-# https://github.com/wilhall/gretel
+# gem 'record_tag_helper'
+# https://github.com/janko/image_processing
+# High-level image processing helper methods with libvips and ImageMagick/GraphicsMagick
+gem 'image_processing'
+# https://github.com/WilHall/gretel
 # Flexible Ruby on Rails breadcrumbs plugin.
 gem 'gretel'
 # Easily include static pages
@@ -231,6 +236,9 @@ gem 'awesome_print'
 # Simple, efficient background processing for Ruby.
 # https://github.com/mperham/sidekiq/
 gem 'sidekiq'
+# sidekiq-scheduler is an extension to Sidekiq that pushes jobs in a scheduled way, mimicking cron utility.
+# https://github.com/moove-it/sidekiq-scheduler
+gem 'sidekiq-scheduler'
 # Used with Active Job for asynchronous messaging
 # https://github.com/brandonhilkert/sucker_punch
 gem 'sucker_punch'
@@ -246,10 +254,11 @@ gem 'dalli', groups: [:production]
 # ### ### ### ### ### ### ### ###
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
+# https://github.com/dannnylo/rtesseract
+# Ruby library for working with the Tesseract OCR
 
 gem 'administrate'
 gem 'friendly_id'
-gem 'acts_as_votable'
 gem 'bourbon'
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'

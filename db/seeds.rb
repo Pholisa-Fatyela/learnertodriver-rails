@@ -1,4 +1,4 @@
-include Sprig::Helpers
+models =  %w( answer question quiz comment post user)
 
 puts "... seeds.rb"
 
@@ -13,5 +13,8 @@ Quiz.delete_all
 puts "... cleaned data User, Quiz, Post, Comment"
 
 sprig [ User, Post, Comment, Quiz, Question, Answer, Response ]
+>>>>>>> master
 
-puts "new data seeded"
+models.each { |m|
+  puts "#{ m.camelize.constantize.count } #{ m.pluralize } created"
+}
