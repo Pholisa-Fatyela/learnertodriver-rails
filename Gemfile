@@ -201,7 +201,7 @@ gem 'sinatra'
 # https://github.com/janko/image_processing
 # High-level image processing helper methods with libvips and ImageMagick/GraphicsMagick
 gem 'image_processing'
-# https://github.com/WilHall/gretel/
+# https://github.com/WilHall/gretel
 # Flexible Ruby on Rails breadcrumbs plugin.
 gem 'gretel'
 # Easily include static pages
@@ -254,10 +254,11 @@ gem 'dalli', groups: [:production]
 # ### ### ### ### ### ### ### ###
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
+# https://github.com/dannnylo/rtesseract
+# Ruby library for working with the Tesseract OCR
 
 gem 'administrate'
 gem 'friendly_id'
-gem 'acts_as_votable'
 gem 'bourbon'
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
