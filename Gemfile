@@ -195,7 +195,6 @@ gem 'simple_form'
 # Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort.
 # https://github.com/sinatra/sinatra
 gem 'sinatra'
-# record_tag_helper
 # https://github.com/rails/record_tag_helper
 # gem 'record_tag_helper'
 # https://github.com/janko/image_processing
@@ -259,6 +258,7 @@ gem 'dalli', groups: [:production]
 
 gem 'administrate'
 gem 'friendly_id'
+gem 'acts_as_votable'
 gem 'bourbon'
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
