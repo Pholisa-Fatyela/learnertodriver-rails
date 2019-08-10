@@ -13,6 +13,12 @@ module ApplicationHelper
     url
   end
 
+  #  "active" classes for menu links 
+
+  def current?(key, path)
+     "#{key}" if current_page? path
+  end
+
   # Pretty Page Title
   def title(page_title)
     content_for(:title) { page_title }

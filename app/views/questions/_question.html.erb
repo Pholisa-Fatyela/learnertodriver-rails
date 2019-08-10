@@ -1,14 +1,13 @@
 <%= div_for(question) do %>
   <div class="quiz-area">
-    <h1>Question <%= question.id %></h1>
-    <h2><%= question.content %></h2>
-
-    <form>
-      <input type="radio" name="gender" value="male"><%= question.option1 %><br>
-      <input type="radio" name="gender" value="female"><%= question.option2 %><br>
-      <input type="radio" name="gender" value="other"><%= question.option3 %><br>  
-      <input type="submit" value="Submit">
-    </form>
-
-  </div>
+    <div class="question">
+      <h1>Question <%= question.id %></h1>
+      <h2><%= question.content %></h2>
+      <ul class="choices">
+        <% question.answers.each do | choices | %>
+          <li><%= choices.content %></li>
+        <% end %>
+      </ul>
+    </div>
+    </div>
 <% end %>

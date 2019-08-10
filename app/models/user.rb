@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+<<<<<<< HEAD
   before_save :create_name, :suggest_username
 
   extend FriendlyId
@@ -6,6 +7,12 @@ class User < ApplicationRecord
 
   # ensure usernames are unique
   validates_uniqueness_of :username
+=======
+  before_save :create_name, :create_username
+
+  extend FriendlyId
+    friendly_id :username, use: :slugged
+>>>>>>> master
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -27,9 +34,14 @@ class User < ApplicationRecord
       self.name = "#{first_name} #{last_name}"
     end
 
+<<<<<<< HEAD
     def suggest_username
       self.username = name.parameterize
       # if self.username
       # self.username = name.parameterize
+=======
+    def create_username
+      self.username = "#{first_name}_#{last_name}".parameterize
+>>>>>>> master
     end
 end

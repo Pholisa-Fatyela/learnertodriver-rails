@@ -1,0 +1,146 @@
+records:
+  - sprig_id: 1
+    content: "The distance it takes a driver of a motor vehicle to stop is …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 2
+    content: "You may cross or enter a public road …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 3
+    content: "The fastest speed at which you may tow a vehicle with a rope is … km/h."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 4
+    content: "You may pass another vehicle on it’s left hand side if it …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 5
+    content: "The furthest that your vehicle’s dim lights may shine in front of you is …. m."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 6
+    content: "The last action you must take before moving to another lane is to …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 7
+    content: "You may NOT drive into an intersection when .."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 8
+    content: "At and intersection …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 9
+    content: "If you come to a robot and the red light flashes, you must …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 10
+    content: "Unless otherwise shown by a sign, the general speed limit in a town or city is … km/h."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 11
+    content: "Your vehicles headlights must be switched on …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 12
+    content: "You may on a public road ... "
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 13
+    content: "A safe following distance is, when the vehicle in front of you suddenly stops, you could ..."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 14
+    content: "If you only have a learner’s licence for a light motor vehicle…"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 15
+    content: "Under which circumstances, if any are you allowed to drive your motor vehicle on the right hand side of a public road with traffic moving in both directions ?"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 16
+    content: "What is true with regards to seat belts?"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 17
+    content: "You may not obtain a leaner’s licence if ..."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 18
+    content: "You are not allowed to stop …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 19
+    content: "A vehicle of which the brakes are not good, must be towed "
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 20
+    content: "The thread pattern on your tires may not be less than ... mm. "
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 21
+    content: "When do you have right of way?"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 22
+    content: "When may you NOT pass another vehicle ? When you ..."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 23
+    content: "A vehicle of which the brakes are not good, must be towed "
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 24
+    content: "Which is ALLOWED when towing another vehicle?"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 25
+    content: "Which is considered the most important RULE OF THE ROAD in South Africa ?"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 26
+    content: "The legal speed which you may drive ..."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 27
+    content: "If you want to turn left with your vehicle, you must"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 28
+    content: "When you were involved in an accident you .."
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"
+  - sprig_id: 29
+    content: "If you change lanes, you must …"
+    level: "Beginner"
+    draft: false
+    quiz_id: "<%= sprig_record(Quiz, 1).id %>"

@@ -1,0 +1,277 @@
+records:
+  - sprig_id: 1
+    answer_id: "<%= sprig_record(Answer, 1).id %>"
+    question_id: "<%= sprig_record(Question, 1).id %>"
+  - sprig_id: 2
+    answer_id: "<%= sprig_record(Answer, 2).id %>"
+    question_id: "<%= sprig_record(Question, 1).id %>"
+  - sprig_id: 3
+    answer_id: "<%= sprig_record(Answer, 3).id %>"
+    question_id: "<%= sprig_record(Question, 1).id %>"
+  - sprig_id: 4
+    answer_id: "<%= sprig_record(Answer, 4).id %>"
+    question_id: "<%= sprig_record(Question, 2).id %>"
+  - sprig_id: 5
+    answer_id: "<%= sprig_record(Answer, 5).id %>"
+    question_id: "<%= sprig_record(Question, 2).id %>"
+  - sprig_id: 6
+    answer_id: "<%= sprig_record(Answer, 6).id %>"
+    question_id: "<%= sprig_record(Question, 2).id %>"
+  - sprig_id: 7
+    answer_id: "<%= sprig_record(Answer, 7).id %>"
+    question_id: "<%= sprig_record(Question, 3).id %>"
+  - sprig_id: 8
+    answer_id: "<%= sprig_record(Answer, 8).id %>"
+    question_id: "<%= sprig_record(Question, 3).id %>"
+  - sprig_id: 9
+    answer_id: "<%= sprig_record(Answer, 9).id %>"
+    question_id: "<%= sprig_record(Question, 3).id %>"
+  - sprig_id: 10
+    answer_id: "<%= sprig_record(Answer, 10).id %>"
+    question_id: "<%= sprig_record(Question, 4).id %>"
+  - sprig_id: 11
+    answer_id: "<%= sprig_record(Answer, 11).id %>"
+    question_id: "<%= sprig_record(Question, 4).id %>"
+  - sprig_id: 12
+    answer_id: "<%= sprig_record(Answer, 12).id %>"
+    question_id: "<%= sprig_record(Question, 4).id %>"
+  - sprig_id: 13
+    answer_id: "<%= sprig_record(Answer, 13).id %>"
+    question_id: "<%= sprig_record(Question, 5).id %>"
+  - sprig_id: 14
+    answer_id: "<%= sprig_record(Answer, 14).id %>"
+    question_id: "<%= sprig_record(Question, 5).id %>"
+  - sprig_id: 15
+    answer_id: "<%= sprig_record(Answer, 15).id %>"
+    question_id: "<%= sprig_record(Question, 5).id %>"
+  - sprig_id: 16
+    answer_id: "<%= sprig_record(Answer, 16).id %>"
+    question_id: "<%= sprig_record(Question, 6).id %>"
+  - sprig_id: 17
+    answer_id: "<%= sprig_record(Answer, 17).id %>"
+    question_id: "<%= sprig_record(Question, 6).id %>"
+  - sprig_id: 18
+    answer_id: "<%= sprig_record(Answer, 18).id %>"
+    question_id: "<%= sprig_record(Question, 6).id %>"
+  - sprig_id: 19
+    answer_id: "<%= sprig_record(Answer, 19).id %>"
+    question_id: "<%= sprig_record(Question, 7).id %>"
+  - sprig_id: 20
+    answer_id: "<%= sprig_record(Answer, 20).id %>"
+    question_id: "<%= sprig_record(Question, 7).id %>"
+  - sprig_id: 21
+    answer_id: "<%= sprig_record(Answer, 21).id %>"
+    question_id: "<%= sprig_record(Question, 7).id %>"
+  - sprig_id: 22
+    answer_id: "<%= sprig_record(Answer, 22).id %>"
+    question_id: "<%= sprig_record(Question, 8).id %>"
+  - sprig_id: 23
+    answer_id: "<%= sprig_record(Answer, 23).id %>"
+    question_id: "<%= sprig_record(Question, 8).id %>"
+  - sprig_id: 24
+    answer_id: "<%= sprig_record(Answer, 24).id %>"
+    question_id: "<%= sprig_record(Question, 8).id %>"
+  - sprig_id: 25
+    answer_id: "<%= sprig_record(Answer, 25).id %>"
+    question_id: "<%= sprig_record(Question, 9).id %>"
+  - sprig_id: 26
+    answer_id: "<%= sprig_record(Answer, 26).id %>"
+    question_id: "<%= sprig_record(Question, 9).id %>"
+  - sprig_id: 27
+    answer_id: "<%= sprig_record(Answer, 27).id %>"
+    question_id: "<%= sprig_record(Question, 9).id %>"
+  - sprig_id: 28
+    answer_id: "<%= sprig_record(Answer, 28).id %>"
+    question_id: "<%= sprig_record(Question, 10).id %>"
+  - sprig_id: 29
+    answer_id: "<%= sprig_record(Answer, 29).id %>"
+    question_id: "<%= sprig_record(Question, 10).id %>"
+  - sprig_id: 30
+    answer_id: "<%= sprig_record(Answer, 30).id %>"
+    question_id: "<%= sprig_record(Question, 10).id %>"
+  - sprig_id: 31
+    answer_id: "<%= sprig_record(Answer, 31).id %>"
+    question_id: "<%= sprig_record(Question, 11).id %>"
+  - sprig_id: 32
+    answer_id: "<%= sprig_record(Answer, 32).id %>"
+    question_id: "<%= sprig_record(Question, 11).id %>"
+  - sprig_id: 33
+    answer_id: "<%= sprig_record(Answer, 33).id %>"
+    question_id: "<%= sprig_record(Question, 11).id %>"
+  - sprig_id: 34
+    answer_id: "<%= sprig_record(Answer, 34).id %>"
+    question_id: "<%= sprig_record(Question, 12).id %>"
+  - sprig_id: 35
+    answer_id: "<%= sprig_record(Answer, 35).id %>"
+    question_id: "<%= sprig_record(Question, 12).id %>"
+  - sprig_id: 36
+    answer_id: "<%= sprig_record(Answer, 36).id %>"
+    question_id: "<%= sprig_record(Question, 12).id %>"
+  - sprig_id: 37
+    answer_id: "<%= sprig_record(Answer, 37).id %>"
+    question_id: "<%= sprig_record(Question, 13).id %>"
+  - sprig_id: 38
+    answer_id: "<%= sprig_record(Answer, 38).id %>"
+    question_id: "<%= sprig_record(Question, 13).id %>"
+  - sprig_id: 39
+    answer_id: "<%= sprig_record(Answer, 39).id %>"
+    question_id: "<%= sprig_record(Question, 13).id %>"
+  - sprig_id: 40
+    answer_id: "<%= sprig_record(Answer, 40).id %>"
+    question_id: "<%= sprig_record(Question, 14).id %>"
+  - sprig_id: 41
+    answer_id: "<%= sprig_record(Answer, 41).id %>"
+    question_id: "<%= sprig_record(Question, 14).id %>"
+  - sprig_id: 42
+    answer_id: "<%= sprig_record(Answer, 42).id %>"
+    question_id: "<%= sprig_record(Question, 14).id %>"
+  - sprig_id: 43
+    answer_id: "<%= sprig_record(Answer, 43).id %>"
+    question_id: "<%= sprig_record(Question, 15).id %>"
+  - sprig_id: 44
+    answer_id: "<%= sprig_record(Answer, 44).id %>"
+    question_id: "<%= sprig_record(Question, 15).id %>"
+  - sprig_id: 45
+    answer_id: "<%= sprig_record(Answer, 45).id %>"
+    question_id: "<%= sprig_record(Question, 15).id %>"
+  - sprig_id: 46
+    answer_id: "<%= sprig_record(Answer, 46).id %>"
+    question_id: "<%= sprig_record(Question, 16).id %>"
+  - sprig_id: 47
+    answer_id: "<%= sprig_record(Answer, 47).id %>"
+    question_id: "<%= sprig_record(Question, 16).id %>"
+  - sprig_id: 48
+    answer_id: "<%= sprig_record(Answer, 48).id %>"
+    question_id: "<%= sprig_record(Question, 16).id %>"
+  - sprig_id: 49
+    answer_id: "<%= sprig_record(Answer, 49).id %>"
+    question_id: "<%= sprig_record(Question, 17).id %>"
+  - sprig_id: 50
+    answer_id: "<%= sprig_record(Answer, 50).id %>"
+    question_id: "<%= sprig_record(Question, 17).id %>"
+  - sprig_id: 51
+    answer_id: "<%= sprig_record(Answer, 51).id %>"
+    question_id: "<%= sprig_record(Question, 17).id %>"
+  - sprig_id: 52
+    answer_id: "<%= sprig_record(Answer, 52).id %>"
+    question_id: "<%= sprig_record(Question, 18).id %>"
+  - sprig_id: 53
+    answer_id: "<%= sprig_record(Answer, 53).id %>"
+    question_id: "<%= sprig_record(Question, 18).id %>"
+  - sprig_id: 54
+    answer_id: "<%= sprig_record(Answer, 54).id %>"
+    question_id: "<%= sprig_record(Question, 18).id %>"
+  - sprig_id: 55
+    answer_id: "<%= sprig_record(Answer, 55).id %>"
+    question_id: "<%= sprig_record(Question, 19).id %>"
+  - sprig_id: 56
+    answer_id: "<%= sprig_record(Answer, 56).id %>"
+    question_id: "<%= sprig_record(Question, 19).id %>"
+  - sprig_id: 57
+    answer_id: "<%= sprig_record(Answer, 57).id %>"
+    question_id: "<%= sprig_record(Question, 19).id %>"
+  - sprig_id: 58
+    answer_id: "<%= sprig_record(Answer, 58).id %>"
+    question_id: "<%= sprig_record(Question, 20).id %>"
+  - sprig_id: 59
+    answer_id: "<%= sprig_record(Answer, 59).id %>"
+    question_id: "<%= sprig_record(Question, 20).id %>"
+  - sprig_id: 60
+    answer_id: "<%= sprig_record(Answer, 60).id %>"
+    question_id: "<%= sprig_record(Question, 20).id %>"
+  - sprig_id: 61
+    answer_id: "<%= sprig_record(Answer, 61).id %>"
+    question_id: "<%= sprig_record(Question, 21).id %>"
+  - sprig_id: 62
+    answer_id: "<%= sprig_record(Answer, 62).id %>"
+    question_id: "<%= sprig_record(Question, 21).id %>"
+  - sprig_id: 63
+    answer_id: "<%= sprig_record(Answer, 63).id %>"
+    question_id: "<%= sprig_record(Question, 21).id %>"
+  - sprig_id: 64
+    answer_id: "<%= sprig_record(Answer, 64).id %>"
+    question_id: "<%= sprig_record(Question, 21).id %>"
+  - sprig_id: 65
+    answer_id: "<%= sprig_record(Answer, 65).id %>"
+    question_id: "<%= sprig_record(Question, 21).id %>"
+  - sprig_id: 66
+    answer_id: "<%= sprig_record(Answer, 66).id %>"
+    question_id: "<%= sprig_record(Question, 21).id %>"
+  - sprig_id: 67
+    answer_id: "<%= sprig_record(Answer, 67).id %>"
+    question_id: "<%= sprig_record(Question, 22).id %>"
+  - sprig_id: 68
+    answer_id: "<%= sprig_record(Answer, 68).id %>"
+    question_id: "<%= sprig_record(Question, 22).id %>"
+  - sprig_id: 69
+    answer_id: "<%= sprig_record(Answer, 69).id %>"
+    question_id: "<%= sprig_record(Question, 22).id %>"
+  - sprig_id: 70
+    answer_id: "<%= sprig_record(Answer, 70).id %>"
+    question_id: "<%= sprig_record(Question, 23).id %>"
+  - sprig_id: 71
+    answer_id: "<%= sprig_record(Answer, 71).id %>"
+    question_id: "<%= sprig_record(Question, 23).id %>"
+  - sprig_id: 72
+    answer_id: "<%= sprig_record(Answer, 72).id %>"
+    question_id: "<%= sprig_record(Question, 23).id %>"
+  - sprig_id: 73
+    answer_id: "<%= sprig_record(Answer, 73).id %>"
+    question_id: "<%= sprig_record(Question, 24).id %>"
+  - sprig_id: 74
+    answer_id: "<%= sprig_record(Answer, 74).id %>"
+    question_id: "<%= sprig_record(Question, 24).id %>"
+  - sprig_id: 75
+    answer_id: "<%= sprig_record(Answer, 75).id %>"
+    question_id: "<%= sprig_record(Question, 24).id %>"
+  - sprig_id: 76
+    answer_id: "<%= sprig_record(Answer, 76).id %>"
+    question_id: "<%= sprig_record(Question, 25).id %>"
+  - sprig_id: 77
+    answer_id: "<%= sprig_record(Answer, 77).id %>"
+    question_id: "<%= sprig_record(Question, 25).id %>"
+  - sprig_id: 78
+    answer_id: "<%= sprig_record(Answer, 78).id %>"
+    question_id: "<%= sprig_record(Question, 25).id %>"
+  - sprig_id: 79
+    answer_id: "<%= sprig_record(Answer, 79).id %>"
+    question_id: "<%= sprig_record(Question, 26).id %>"
+  - sprig_id: 80
+    answer_id: "<%= sprig_record(Answer, 80).id %>"
+    question_id: "<%= sprig_record(Question, 26).id %>"
+  - sprig_id: 81
+    answer_id: "<%= sprig_record(Answer, 81).id %>"
+    question_id: "<%= sprig_record(Question, 26).id %>"
+  - sprig_id: 82
+    answer_id: "<%= sprig_record(Answer, 82).id %>"
+    question_id: "<%= sprig_record(Question, 27).id %>"
+  - sprig_id: 83
+    answer_id: "<%= sprig_record(Answer, 83).id %>"
+    question_id: "<%= sprig_record(Question, 27).id %>"
+  - sprig_id: 84
+    answer_id: "<%= sprig_record(Answer, 84).id %>"
+    question_id: "<%= sprig_record(Question, 27).id %>"
+  - sprig_id: 85
+    answer_id: "<%= sprig_record(Answer, 85).id %>"
+    question_id: "<%= sprig_record(Question, 28).id %>"
+  - sprig_id: 86
+    answer_id: "<%= sprig_record(Answer, 86).id %>"
+    question_id: "<%= sprig_record(Question, 28).id %>"
+  - sprig_id: 87
+    answer_id: "<%= sprig_record(Answer, 87).id %>"
+    question_id: "<%= sprig_record(Question, 28).id %>"
+  - sprig_id: 88
+    answer_id: "<%= sprig_record(Answer, 88).id %>"
+    question_id: "<%= sprig_record(Question, 29).id %>"
+  - sprig_id: 89
+    answer_id: "<%= sprig_record(Answer, 89).id %>"
+    question_id: "<%= sprig_record(Question, 29).id %>"
+  - sprig_id: 90
+    answer_id: "<%= sprig_record(Answer, 90).id %>"
+    question_id: "<%= sprig_record(Question, 29).id %>"
+  - sprig_id: 91
+    answer_id: "<%= sprig_record(Answer, 91).id %>"
+    question_id: "<%= sprig_record(Question, 1).id %>"
+  - sprig_id: 92
+    answer_id: "<%= sprig_record(Answer, 92).id %>"
+    question_id: "<%= sprig_record(Question, 1).id %>"

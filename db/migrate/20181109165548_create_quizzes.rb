@@ -4,6 +4,8 @@ class CreateQuizzes < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :kind
       t.string :info
+      t.integer :duration, default: 3600
+      t.integer :question_count, default: 0
       t.string :description
 
       t.timestamps
