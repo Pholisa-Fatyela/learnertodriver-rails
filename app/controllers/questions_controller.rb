@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @quiz = Quiz.friendly.find(params[:post_id])
+    @quiz = Quiz.friendly.find(params[:id])
     @question = @quiz.questions.new(question_params)
 
     respond_to do |format|
