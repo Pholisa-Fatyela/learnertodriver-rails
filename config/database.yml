@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: learnertodriver-rails_production
-  username: learnertodriver-rails
+  username: siya
   password: <%= ENV['LEARNERTODRIVER-RAILS_DATABASE_PASSWORD'] %>
