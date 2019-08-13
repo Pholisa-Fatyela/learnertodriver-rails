@@ -509,7 +509,7 @@ DEPENDENCIES
   premailer-rails
   rack-cors
   rack-livereload
-  rails (~> 6.0.0.rc1)
+  rails (~> 6.0.0.rc2)
   rb-readline
   redis
   rerun
