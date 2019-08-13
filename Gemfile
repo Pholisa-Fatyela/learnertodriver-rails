@@ -10,7 +10,7 @@ gem 'pg'
 # Use Phusion Passenger as the app server
 gem 'passenger'
 # Ruby on Rails stylesheet engine for Sass
-gem 'sass-rails'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
