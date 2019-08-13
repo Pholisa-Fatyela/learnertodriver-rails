@@ -97,7 +97,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
  #CHANGED - Devise - Added :confirmable to Devise using http://mailgun.com
-  config.action_mailer.default_url_options = { host: ENV["HEROKU_URL"] }
+  config.action_mailer.default_url_options = { host: ENV["APP_URL"] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
