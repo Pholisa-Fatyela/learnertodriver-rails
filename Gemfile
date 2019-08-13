@@ -4,12 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0.rc2'
+gem 'rails', '~> 6.0.0.rc1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Phusion Passenger as the app server
 gem 'passenger'
 # Ruby on Rails stylesheet engine for Sass
+# gem 'sassc-rails'
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
@@ -73,7 +74,9 @@ end
 # ### ### ### ### ### ### ### ###
 # Benchmarking
 # ### ### ### ### ### ### ### ###
-
+# https://github.com/getsentry/raven-ruby
+# Raven is a Ruby client for Sentry https://getsentry.com
+gem 'sentry-raven'
 # https://github.com/schneems/derailed_benchmarks#dynamic-app-benchmarking
 # ### ### ### ### ### ### ### ###
 # https://github.com/flyerhzm/bullet
