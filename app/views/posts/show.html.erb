@@ -56,9 +56,11 @@
             <p><%= @post.user.bio %></p>
           </div>
           <div class="author social">
-            <p>T</p>
-            <p>F</p>
-            <p>M</p>
+            <div class="center">
+              <div class="icon">T</div>
+              <div class="icon">F</div>
+              <div class="icon">M</div>
+            </div>
           </div>
 
       </div>
@@ -70,7 +72,6 @@
 <article class="comments content">
   <div class="comments-title-container">
     <h2 class="comments-title fleft"><%= @post.comments.count %> Comments</h2>
-    <div class="clear"></div>
   </div>
 
   <div id="comment-section" class="comment-section">
@@ -79,14 +80,14 @@
       <%= render :partial => @post.comments.includes(:user) %>
     <% else %>
 
-    <div class="header">
-      <h1>Be the first to comment</h1>
+    <div class="comment-header">
+      <h4>Be the first to comment</h4>
     </div>
 
     <% end %>
 
     <div id="respond" class="comment-respond">
-      <h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3>
+      <h4 id="reply-title" class="comment-reply-title">Leave a Reply</h4>
 
     <%= simple_form_for [@post, Comment.new]  do |f| %>
       <div class="field">
