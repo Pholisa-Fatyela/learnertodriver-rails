@@ -7,10 +7,6 @@
   }
 }
 
-.container {
-  margin: 1.5rem;
-}
-
 .grey-block {
   background: $flat;
   box-shadow: $deep-shadow;
@@ -71,8 +67,6 @@
   background-image: linear-gradient($light-grey, $light-black), url(image_path("bg/main.jpg"));
   font-weight: 400;
   text-align: center;
-
-  position: relative;
   width: 100%;
   height: 150px;
   display: table;

@@ -1,4 +1,5 @@
-.profile-area, .profile-post-area {
+.profile-area,
+.profile-post-area {
   padding: 3rem;
   text-align: center;
   margin: auto;
@@ -56,14 +57,26 @@
   align-items: center;
 }
 
-.nav-logo , .dropdown {
+.nav-logo,
+.dropdown {
   width: 100px;
+
+  .menu {
+    cursor: pointer;
+  }
+
+  .icon {
+    svg {
+      width: 50px;
+    }
+  }
 
   svg , img {
     display: block;
     width: auto;
     height: 60px;
     margin: 0 auto;
+    padding: .2rem;
   }
 }
 
@@ -111,7 +124,8 @@
     border-top: 1px solid $grey;
     color: $ocean;
     display: block;
-    padding: 10px 15px;
+    width: 100%;
+    padding: .4rem;
 
     &:hover {
       background-color: $blue;

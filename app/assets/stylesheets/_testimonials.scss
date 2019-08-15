@@ -1,6 +1,6 @@
 .testimonials {
   padding: 2.5em 0;
-  background-image: url(image_path("bg/absract.svg"));
+  background-image: url(image_path("svg/background.svg"));
   background-position: center top;
   background-repeat: repeat-x;
 }
@@ -11,8 +11,7 @@
   margin: 4rem auto;
 }
 
-.quote-image,
-.quote-avatar {
+.quote-image, .quote-avatar {
   border: 5px solid $white;
   border-radius: 44px;
   height: 73px;
