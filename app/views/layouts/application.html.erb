@@ -17,15 +17,15 @@
 
   <body>
 
-    <div class="wrapper">
-      <%= render 'layouts/header' %>
-      <%= render 'layouts/messages' %>
+    <div class="cream wrapper">
+      <%= render 'layouts/components/header' %>
+      <%= render 'layouts/components/messages' %>
 
       <%= yield  %>
 
-      <%= render 'layouts/footer' %>
+      <%= render 'layouts/components/footer' %>
     </div>
 
   </body>
-    <%= render :partial => 'layouts/google_analytics' %>
+    <%= render :partial => 'layouts/components/google_analytics' %>
 </html>

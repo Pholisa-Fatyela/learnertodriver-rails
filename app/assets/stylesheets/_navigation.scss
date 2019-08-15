@@ -2,10 +2,9 @@
 
 .navigation {
   background: $dusk;
-  box-shadow: $block-shadow;
+  box-shadow: $full-box;
   line-height: 50px;
   font-size: larger;
-  position: relative;
   text-align: center;
   width: 100%;
 
@@ -72,7 +71,6 @@
   justify-content: center;
 
   li {
-
     ul {
       background-color: $dusk;
     }
@@ -100,6 +98,22 @@
       border-bottom: 2px solid $bright;
       color: $white;
     }
+  }
+}
+
+
+.reg-logo {
+  margin: auto;
+  padding: 0  0 1.5rem 0;
+  width: 100px;
+
+  .logo {
+    width: 100px;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
   }
 }
 

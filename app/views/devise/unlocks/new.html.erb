@@ -1,19 +1,19 @@
-<div class="main devise sign-up">
-	<div class="sign-up form">
+<h2>Resend unlock instructions</h2>
 
-	<h2>Resend unlock instructions</h2>
+<%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+  <%= f.full_error :unlock_token %>
 
-	<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-		<%= devise_error_messages! %>
+  <div class="form-inputs">
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+  </div>
 
-		<div><%= f.label :email %><br />
-		<%= f.email_field :email, autofocus: true %></div>
+  <div class="form-actions">
+    <%= f.button :submit, "Resend unlock instructions" %>
+  </div>
+<% end %>
 
-		<div><%= f.submit "Resend unlock instructions" %></div>
-	<% end %>
-
-	<div class="links">
-		<%= render "devise/shared/links" %>
-	</div>
-	</div>
-</div>
+<%= render "devise/shared/links" %>

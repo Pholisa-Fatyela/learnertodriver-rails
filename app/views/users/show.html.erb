@@ -24,7 +24,7 @@
 		<div class="profile-info-area">
 			<div class="profile-extra pull-right">
 				<% if @user == current_user %>
-					<%= link_to "Edit", edit_user_registration_path, class: "button fa fa-pencil-square-o" %>
+					<%= link_to "Edit", edit_user_path(current_user), class: "button fa fa-pencil-square-o" %>
 				<% end %>
 			</div>
 

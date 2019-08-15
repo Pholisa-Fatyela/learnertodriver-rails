@@ -3,7 +3,6 @@
 -----------------------------*/
 
 body {
-  background: $cream;
   font-family: $base-font-family;
   font-size: 18px;
   font-weight: 400;
@@ -54,6 +53,10 @@ h3 {
   font-size: 1.2rem;
 }
 
+table {
+  table-layout: auto;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -63,7 +66,7 @@ footer {
 }
 
 .container {
-  min-height: 70vh;
+  margin: auto;
   padding: 30px 0;
 }
 
@@ -159,12 +162,35 @@ footer {
   text-align: right;
 }
 
+.fixed {
+  position: fixed;
+  
+  &.top {
+    top: 0;
+  }
+  &.bottom {
+    bottom: 0;
+  }
+}
+
 .hidden {
   display: none;
 }
 
 .invisibile {
   opacity: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.spaced-between {
+  justify-content: space-between;
+}
+
+.spaced-around {
+  justify-content: space-around;
 }
 
 .grey-text {
@@ -211,6 +237,10 @@ footer {
 
 .light {
   background: $slate;
+}
+
+.cream {
+  background: $cream;
 }
 
 .yellow {

@@ -2,19 +2,16 @@
 .sign-up {
   margin: 4rem .4rem;
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
 }
 
 .devise {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  justify-content: center;
-  line-height: 25px;
-  margin-top: 40px;
+  width: 50%;
+  margin: auto;
+  max-width: 700px;
 
   .mainbox {
     margin-left: auto;
@@ -39,6 +36,7 @@
 
   .links {
     font-size: 95%;
+    margin: 2rem 0 0;
   }
 
   a {
@@ -53,7 +51,6 @@
   div,
   .boolean {
     margin: .2rem;
-    padding: .2rem;
   }
 
   input {
@@ -63,7 +60,7 @@
     margin: 0;
     outline: 0;
     padding: 0;
-    transition: background-color 0.3s;
+    transition: background-color .3s;
   }
 }
 
@@ -82,6 +79,21 @@
   z-index: 1;
 }
 
+.form {
+  background: $white;
+  border: 3px solid $gainsboro;
+  border-radius: .4rem;
+  padding: 1.8rem 2rem;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+}
+
 @keyframes fadeinout {
   0%,
   100% {
@@ -93,4 +105,10 @@
     opacity: 1;
     visibility: visible;
   }
+}
+
+.lines-grad {
+  background-image: url(image_path("svg/lines_light.svg")), radial-gradient($clean 5%, $white 15%, $clean 60%);
+  background-position: center 10%;
+  background-size: cover;
 }
