@@ -198,8 +198,6 @@ gem 'simple_form'
 # Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort.
 # https://github.com/sinatra/sinatra
 gem 'sinatra'
-# https://github.com/rails/record_tag_helper
-# gem 'record_tag_helper'
 # https://github.com/janko/image_processing
 # High-level image processing helper methods with libvips and ImageMagick/GraphicsMagick
 gem 'image_processing'

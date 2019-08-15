@@ -1,13 +1,12 @@
-<%= form_for(question) do %>
-  <div class="quiz-area">
-    <div class="question">
-      <h1>Question <%= question.id %></h1>
-      <h2><%= question.content %></h2>
-      <ul class="choices">
-        <% question.answers.each do | choices | %>
-          <li><%= choices.content %></li>
-        <% end %>
-      </ul>
-    </div>
-    </div>
-<% end %>
+<div class="quiz-area">
+  <div class="question">
+    <% index = question_counter + 1 %>
+    <h1>Question <%= index %></h1>
+    <h2><%= question.content %></h2>
+    <ul class="choices">
+      <% question.answers.each do | choices | %>
+        <li><%= choices.content %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
