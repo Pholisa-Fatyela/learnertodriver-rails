@@ -1,4 +1,4 @@
-models =  %w( answer question quiz comment post user)
+models =  %w( response answer question quiz comment post user)
 
 puts "... deleting all existing data 🗑"
   
