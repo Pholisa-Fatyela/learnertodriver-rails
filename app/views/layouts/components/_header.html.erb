@@ -25,40 +25,39 @@
     <div class="nav-profile">
 
       <% if user_signed_in? %>
-      
-      <div class="user-menu-wrap">
-        <!-- drop down -->
-          <div id="dropdown">
-            <!-- [ @click="toggleActive" ] -->
-            <a class="nav-avatar">
-              <%= image_tag gravatar_url(current_user.email, :size=> 51), alt: 'nav-img', class: 'nav-img' %>
-            </a>
 
-            <!-- menu  [ v-bind:class="{ active: active }" ]-->
-            <div class="menu-container">
-              <ul class="user-menu">
+    <div class="user-menu-wrap">
+      <!-- drop down -->
+        <div id="dropdown" data-controller="dropdown">
 
-                <li><%= link_to user_path(current_user), class: 'user-menu-link' do %>
-                  <i class="fa fa-user"></i> Profile
-                    <% end %>
-                </li>
-                  <% if warden.user.admin == true %>
-                <li><%= link_to admin_root_path, class: 'user-menu-link' do %>
-                  <i class="fa fa-lock"></i> Admin
-                <% end %>
-                </li>
-                  <% end %>
-                <div class="divider"></div>
-                <li><%= link_to destroy_user_session_path, class: 'user-menu-link', :method => :delete  do %>
-                  <i class="fa fa-power-off"></i> Log Out
-                <% end %>
-                </li>
-
-              </ul>
-            </div>
+          <div class="nav-avatar" data-action="click->dropdown#toggle">
+            <%= image_tag gravatar_url(current_user.email, :size=> 51), alt: 'nav-img', class: 'nav-img' %>
           </div>
 
-      </div>
+          <div class="menu-container" data-target="dropdown.menu">
+            <ul class="user-menu">
+
+              <li><%= link_to user_path(current_user), class: 'user-menu-link' do %>
+                <i class="fa fa-user"></i> Profile
+                  <% end %>
+              </li>
+                <% if warden.user.admin == true %>
+              <li><%= link_to admin_root_path, class: 'user-menu-link' do %>
+                <i class="fa fa-lock"></i> Admin
+              <% end %>
+              </li>
+                <% end %>
+              <div class="divider"></div>
+              <li><%= link_to destroy_user_session_path, class: 'user-menu-link', :method => :delete  do %>
+                <i class="fa fa-power-off"></i> Log Out
+              <% end %>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+    </div>
 
       <% else %>
 
