@@ -1,17 +1,12 @@
-<% @questions.each_with_index do { |question,index| %>
-	<div class="quiz-area">
-
-
-		<%= content_tag :div, :class => "question" do %>
-			<h1>Question <%= index %></h1>
-				<p><%= question.content %></p>
-					<ul class="choices">
-						<% question.answers.each do | choices | %>
-							<li><%= choices.content %></li>
-						<% end %>
-					</ul>
-		 <% end %>
-
-
-	</div>
-<% end %>
+<div class="quiz-area">
+  <div class="question">
+    <% index = question_counter + 1 %>
+    <h1>Question <%= index %></h1>
+    <h2><%= question.content %></h2>
+    <ul class="choices">
+      <% question.answers.each do | choices | %>
+        <li><%= choices.content %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

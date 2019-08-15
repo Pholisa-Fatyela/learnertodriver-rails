@@ -1,24 +1,22 @@
-<%= div_for(comment) do %>
-	<div class="comment">
-			<%= image_tag gravatar_url(comment.user.email), class: 'avatar' %>
-		<div class="comment-inner">
-				<div class="comment-header">
-						<cite class="comment-meta"><%= comment.user.username %></cite>
-						<p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
-						<div class="comment-actions">
-							<% if comment.user == current_user %>
-								
-								<%= link_to '', comments_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash" %>
-								 
-							<% end %>
-							<div class="clear"></div>
-						</div>
-				</div>
+<div class="comment">
+    <%= image_tag gravatar_url(comment.user.email), class: 'avatar' %>
+  <div class="comment-inner">
+      <div class="comment-header">
+          <cite class="comment-meta"><%= comment.user.username %></cite>
+          <p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+          <div class="comment-actions">
+            <% if comment.user == current_user %>
+              
+              <%= link_to '', comments_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash" %>
+               
+            <% end %>
+            <div class="clear"></div>
+          </div>
+      </div>
 
-				<div class="comment-content">
-					<p><%= comment.body %></p>
-				</div>
+      <div class="comment-content">
+        <p><%= comment.body %></p>
+      </div>
 
-		</div>
-	</div>
-<% end %>
+  </div>
+</div>
