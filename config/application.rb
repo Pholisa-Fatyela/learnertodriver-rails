@@ -18,3 +18,7 @@ module LearnertodriverRails
     config.assets.precompile += %w( foundation_emails.css )
   end
 end
+
+Raven.configure do |config|
+  config.dsn = 'https://c5fd40e7075e4248a90d08bff989825b:18ce1c085f4949dfa903fdeb7a11aece@sentry.io/1529851'
+end
