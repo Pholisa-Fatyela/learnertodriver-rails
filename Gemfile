@@ -257,7 +257,6 @@ gem 'dalli', groups: [:production]
 # https://github.com/dannnylo/rtesseract
 # Ruby library for working with the Tesseract OCR
 
-# gem 'administrate'
 gem 'friendly_id'
 gem 'acts_as_votable'
 gem 'bourbon'

@@ -6,14 +6,6 @@ Rails.application.routes.draw do
 
   root 'landing#index'
 
-  # namespace :admin do
-  #   resources :posts
-  #   resources :users
-  #   resources :comments
-
-  #   root to: 'posts#index'
-  # end
-
   devise_for :users,
   controllers: {
     sessions: 'users/sessions',
