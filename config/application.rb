@@ -9,7 +9,10 @@ Bundler.require(*Rails.groups)
 module LearnertodriverRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.0
+# https://github.com/rails/rails/issues/36100
+    Rails.autoloaders.main.ignore("#{Rails.root}/app/overrides")
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
