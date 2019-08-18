@@ -41,12 +41,7 @@
                 <i class="fa fa-user"></i> Profile
                   <% end %>
               </li>
-                <% if warden.user.admin == true %>
-              <li><%= link_to admin_root_path, class: 'user-menu-link' do %>
-                <i class="fa fa-lock"></i> Admin
-              <% end %>
-              </li>
-                <% end %>
+
               <div class="divider"></div>
               <li><%= link_to destroy_user_session_path, class: 'user-menu-link', :method => :delete  do %>
                 <i class="fa fa-power-off"></i> Log Out
