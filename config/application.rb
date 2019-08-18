@@ -10,9 +10,6 @@ module LearnertodriverRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults "6.0" 
-    # https://github.com/rails/rails/issues/36100
-    Rails.autoloaders.main.ignore("#{Rails.root}/app/overrides")
-
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -20,4 +17,8 @@ module LearnertodriverRails
     # the framework and any gems in your application.
     config.assets.precompile += %w( foundation_emails.css )
   end
+end
+
+Raven.configure do |config|
+  config.dsn = 'https://c5fd40e7075e4248a90d08bff989825b:18ce1c085f4949dfa903fdeb7a11aece@sentry.io/1529851'
 end
