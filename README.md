@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/badge/Ruby-v2.6.3-green.svg" alt="ruby version"/>
   </a>
   <a href="http://rubyonrails.org/">
-    <img src="https://img.shields.io/badge/Rails-v5.1.5-brightgreen.svg" alt="rails version"/>
+    <img src="https://img.shields.io/badge/Rails-v6.0.0-brightgreen.svg" alt="rails version"/>
   </a>
 
 ## Getting Started
