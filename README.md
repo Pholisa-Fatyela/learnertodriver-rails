@@ -1,33 +1,46 @@
-# Learner to Driver
-## Practice the SA learners test
+<div align="center">
+  <br>
+  <img
+    alt="Learner to Driver"
+    src="https://typographics.co.za/svg/logos/learnertodriver.svg"
+    width=200px
+  />
+  <br/>
+  <h1>📚 📝 🚗</h1>
+  <strong>Rails PWA with quizzes to get you ready for the SA learners test</strong>
+</div>
+<br/>
+<p align="center">
+  <a href="https://www.ruby-lang.org/en/">
+    <img src="https://img.shields.io/badge/Ruby-v2.6.3-green.svg" alt="ruby version"/>
+  </a>
+  <a href="http://rubyonrails.org/">
+    <img src="https://img.shields.io/badge/Rails-v6.0.0-brightgreen.svg" alt="rails version"/>
+  </a>
+
+## Getting Started
 
 ### Prerequisites
 
-You should have ruby installed this project runs on ruby 2.5.1
-Postgresql needs to be installed for the database
+* [Ruby](https://www.ruby-lang.org/en/): we recommend using [rvm](https://rvm.io/) to install the Ruby version listed on the badge.
+* [PostgreSQL](https://www.postgresql.org/) 9.4 or higher.
 
-## Dependecies
+### Installation
 
-Rails Webpacker JS
+0.  Make sure all the prerequisites are installed.
+1.  Fork invoiced-rsa repository, ie. https://github.com/siyanda/invoiced-rsa/fork
+1.  Clone your forked repository, ie. `git clone https://github.com/<your-username>/invoiced-rsa.git`
+1.  `gem install bundler`
+1.  `gem install foreman`
+1.  `bundle install`
 
-## Set up
-`git clone {repo_url}` clone the repository to your local dev enviroment
-`bundle install` install gems
-`yarn install` to install javascript packages
-`rails db:migrate` migrate the database
-`rails db:seed` to seed data
-`rails s` to start
+#### Starting the application
 
-# Application config
+1.  `rails s`
 
-main app www.learnertodriver.co.za
+<br/>
 
-# Contributing
-
-## Code Style
-
-linters are used to keep a consistance code style, some on the styles to be noted for each language are:
-
-### SCSS
-We use to inforce simple styling rules like keeping a space after a colon
-the rules can be found in `.csscomb.json` use also use linting with SASS lint, to warn against style violations config file is found in the root dir `.sass-lint.yml`
+<p align="center">
+  <br/>
+  <strong>Enjoy</strong> ❤️
+</p>
