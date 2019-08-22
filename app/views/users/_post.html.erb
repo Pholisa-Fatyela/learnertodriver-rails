@@ -1,5 +1,5 @@
 <% @user.posts.each do |post| %>
-	<div class="main block">
+	<div class="main content block">
 		<div class="block-header">
 			<h2><%= link_to truncate(post.title, :length => 65), post %></h2>
 		</div>

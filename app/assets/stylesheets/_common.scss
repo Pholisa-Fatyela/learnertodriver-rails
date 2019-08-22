@@ -168,8 +168,25 @@ footer {
   &.top {
     top: 0;
   }
+
   &.bottom {
     bottom: 0;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &.centered {
+    justify-content: center;
+  }
+
+  &.spaced-between {
+    justify-content: space-between;
+  }
+
+  &.spaced-around {
+    justify-content: space-around;
   }
 }
 
@@ -183,14 +200,6 @@ footer {
 
 .full-width {
   width: 100%;
-}
-
-.spaced-between {
-  justify-content: space-between;
-}
-
-.spaced-around {
-  justify-content: space-around;
 }
 
 .grey-text {

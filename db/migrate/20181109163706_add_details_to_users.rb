@@ -4,6 +4,8 @@ class AddDetailsToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :first_name, :string
     add_column :users, :last_name, :string
     add_column :users, :username, :string
+    add_column :users, :social_link, :string
+    add_column :users, :portfolio_link, :string
     add_column :users, :bio, :text
     add_column :users, :birthday, :date
     add_column :users, :user_count, :integer, default: 0
