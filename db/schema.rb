@@ -149,6 +149,8 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
+    t.string "social_link"
+    t.string "portfilo_link"
     t.text "bio"
     t.date "birthday"
     t.integer "user_count", default: 0

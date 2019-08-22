@@ -56,10 +56,20 @@
             <p><%= @post.user.bio %></p>
           </div>
           <div class="author social">
-            <div class="center">
-              <div class="icon">T</div>
-              <div class="icon">F</div>
-              <div class="icon">M</div>
+            <div class="flex centered">
+
+              <%= link_to "https://twitter.com/#{ @post.user.social_link}" do %>
+                <div class="twitter icon">
+                  <%= inline_svg("twitter.svg") %>
+                </div>
+              <% end %>
+
+              <%= link_to "https://instagram.com/#{ @post.user.portfilo_link }" do %>
+                <div class="insta icon">
+                  <%= inline_svg("instagram.svg") %>
+                </div>
+             <% end %>
+
             </div>
           </div>
 
