@@ -1,10 +1,12 @@
 <div align="center">
   <br>
-  <img
-    alt="Learner to Driver"
-    src="https://typographics.co.za/svg/logos/learnertodriver.svg"
-    width=200px
-  />
+  <a href="http://learnertodriver.co.za/">
+    <img
+      alt="Learner to Driver"
+      src="https://typographics.co.za/svg/logos/learnertodriver.svg"
+      width=200px
+    />
+  </a>
   <br/>
   <h1>📚 📝 🚗</h1>
   <strong>Rails PWA with quizzes to get you ready for the SA learners test</strong>
