@@ -57,7 +57,7 @@
           </div>
           <div class="author social">
             <div class="flex centered">
-          <% if @post.user.social_link.any? %>
+          <% if @post.user.social_link %>
               <%= link_to "https://twitter.com/#{ @post.user.social_link}" do %>
                 <div class="twitter icon">
                   <%= inline_svg("twitter.svg") %>
@@ -65,7 +65,7 @@
               <% end %>
            <% end %>
 
-          <% if @post.user.portfilo_link.any? %>
+          <% if @post.user.portfilo_link %>
               <%= link_to "https://instagram.com/#{ @post.user.portfilo_link }" do %>
                 <div class="insta icon">
                   <%= inline_svg("instagram.svg") %>
