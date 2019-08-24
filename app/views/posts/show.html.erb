@@ -65,8 +65,8 @@
               <% end %>
            <% end %>
 
-          <% if @post.user.portfilo_link %>
-              <%= link_to "https://instagram.com/#{ @post.user.portfilo_link }", target: "_blank" do %>
+          <% if @post.user.portfolio_link %>
+              <%= link_to "https://instagram.com/#{ @post.user.portfolio_link }", target: "_blank" do %>
                 <div class="insta icon">
                   <%= inline_svg("instagram.svg") %>
                 </div>
