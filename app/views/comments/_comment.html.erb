@@ -2,7 +2,7 @@
     <%= image_tag gravatar_url(comment.user.email), class: 'avatar' %>
   <div class="comment-inner">
       <div class="comment-header">
-          <cite class="comment-meta"><%= comment.user.username %></cite>
+          <cite class="comment-meta"><%= comment.user.name %></cite>
           <p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
           <div class="comment-actions">
             <% if comment.user == current_user %>
