@@ -31,14 +31,14 @@
 
 0.  Make sure all the prerequisites are installed.
 1.  Fork invoiced-rsa repository, ie. https://github.com/siyanda/invoiced-rsa/fork
-1.  Clone your forked repository, ie. `git clone https://github.com/<your-username>/invoiced-rsa.git`
+1.  Clone your forked repository, ie. `git clone https://github.com/<your-username>/learnertodriver-rails.git`
 1.  `gem install bundler`
 1.  `gem install foreman`
 1.  `bundle install`
 
 #### Starting the application
 
-1.  `rails s`
+1.  `foreman start`
 
 <br/>
 
