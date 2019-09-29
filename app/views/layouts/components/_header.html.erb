@@ -6,8 +6,8 @@
     <ul class="navlist">
 
       <li><%= link_to "Home", root_path, class: "#{current? "active", root_path}"%></li>
-      <li><%= link_to "Tests", quizzes_path, class: "#{current? "active", quizzes_path}"%></li>
-      <li><%= link_to "Blog", posts_path, class: "#{current? "active", posts_path}"%></li>
+      <li><%= link_to "Quizzes", quizzes_path, class: "#{current? "active", quizzes_path}"%></li>
+      <li><%= link_to "Posts", posts_path, class: "#{current? "active", posts_path}"%></li>
       <li><%= link_to "About", page_path('about'), class: "#{current? "active", page_path('about')}"%></li>
     </ul>
   </nav>

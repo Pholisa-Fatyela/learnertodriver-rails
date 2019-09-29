@@ -1,11 +1,19 @@
-#progressbar {
+.progressbar {
   width: 98%;
-  height: 15px;
+  height: 17px;
   background-color: $clean;
-  padding: 5px;
   margin: .6em 0;
   border: 1px double $slate;
   border-radius: 5px;
-  clear: both;
   box-shadow: 0 1px 5px $slate inset, 0 1px 0 $gainsboro;
+}
+
+.progress {
+  background-image: linear-gradient(to right, $sky 0%, $bright 100%);
+  border-radius: 5px;
+  height: 15px;
+  width: 0;
+  max-width: 100%;
+  float: left;
+  width: 50%;
 }

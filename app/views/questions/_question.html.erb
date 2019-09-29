@@ -1,17 +1,16 @@
 <div class="quiz-area">
   <div class="question">
-    <% index = question_counter + 1 %>
 
-    <h1 class="question-head">Question <%= index %></h1>
+    <h1 class="question-head">Question </h1>
     <h2 class="question-content"><%= question.content %></h2>
 
     <ul class="choices">
-      <% question.answers.each do | choices | %>
-        <li><%= choices.content %></li>
+      <% question.answers.each do | choice | %>
+        <li><%= radio_button_tag 'choice', choice.id %>
+          <%= choice.content %>
+        </li>
       <% end %>
     </ul>
-
-    <div class="button">Submit</div>
 
   </div>
 </div>
