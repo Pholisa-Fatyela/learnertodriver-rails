@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
   # GET /quizzes/1
   # GET /quizzes/1.json
   def show
-    @questions = Question.page(params[:page]).per(1)
+    @questions = @quiz.questions.order(:id => :asc).includes(:answers)
   end
 
   # GET /quizzes/new
