@@ -31,9 +31,6 @@ gem 'bcrypt'
 # Use ActiveStorage variant
 gem 'image_processing'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
