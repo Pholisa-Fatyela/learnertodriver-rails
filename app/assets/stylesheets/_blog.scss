@@ -58,32 +58,12 @@
   }
 }
 
-.icon {
-  margin: 0 1.2rem;
-  width: 28px;
-  cursor: pointer;
-  border-bottom: 2px solid $slate;
-  transition: border .3s linear;
-
-  &.twitter {
-    fill: $tweet;
-  }
-
-  &.insta {
-    fill: $insta;
-  }
-
-  &:hover {
-    border-bottom: 2px solid $white;
-  }
-}
-
 .pagination {
   background-color: $white;
   border-radius: 5px;
   box-shadow: $nav-box;
-  display: inline-block;
-  margin: 2rem auto;
+  // display: inline-block;
+  // margin: 2rem auto;
 
   .current {
     background-color: $blue;

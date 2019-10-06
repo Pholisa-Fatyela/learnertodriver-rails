@@ -1,7 +1,7 @@
 body {
   // -webkit-touch-callout: none; // change for pwa mode only
   // -webkit-user-select: none; // change for pwa mode only
-  // -webkit-tap-highlight-color: transparent; // change for pwa mode only
+  // -webkit-tap-highlight-color: transparent;
 }
 
 .pwa {
@@ -37,7 +37,7 @@ body {
 
     &.active {
       border-top: 4px solid $brand-blue;
-      background: #f5f5f5;
+      background: $cream;
     }
 
     svg {

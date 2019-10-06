@@ -1,9 +1,7 @@
 // Primary Nav
 
 .navigation {
-  background: $dusk;
   box-shadow: $full-box;
-  line-height: 50px;
   font-size: larger;
   text-align: center;
   width: 100%;
@@ -19,6 +17,7 @@
       position: relative;
       text-decoration: none;
       transition-duration: .5s;
+      // width: 100%;
 
       ul {
         display: none;
@@ -32,35 +31,6 @@
       }
     }
   }
-
-
-  li {
-
-    &:hover,
-    &:focus-within {
-      cursor: pointer;
-    }
-  }
-
-
-  li:focus-within a {
-    outline: none;
-  }
-
-  ul li:hover > ul,
-  ul li:focus-within > ul,
-  ul li ul:hover,
-  ul li ul:focus {
-    visibility: visible;
-    opacity: 1;
-    display: block
-  }
-
-  ul li ul li {
-    clear: both;
-    width: 100%;
-  }
-
 }
 
 .navlist {
@@ -68,39 +38,85 @@
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
 
-  li {
-    ul {
-      background-color: $dusk;
-    }
+  &.spaced-between {
+    justify-content: space-between;
+  }
+
+  &.center {
+    justify-content: center;
   }
 
   a {
-    border-bottom: 2px solid $clear-grey;
-    color: $grey;
-    display: inline-block;
-    font-weight: 600;
-    height: inherit;
-    line-height: inherit;
-    padding: 5px 25px;
-    text-transform: uppercase;
-    transition: color 150ms ease;
-
-    &:hover {
-      background: $base;
-      border-bottom: 2px solid $sky;
-      color: $white;
+    &:focus {
+      outline: none;
     }
+  }
 
-    &.active {
-      background: $ocean;
-      border-bottom: 2px solid $bright;
-      color: $white;
+  .logo {
+    padding: .4rem;
+
+    svg {
+      height: 50px;
     }
   }
 }
 
+.sidebar-container {
+  .nav-item {
+    padding: 1.2rem 1.2rem 1.2rem 2.8rem;
+  }
+}
+
+.nav-item {
+  color: $grey;
+  display: inline-block;
+  font-weight: 600;
+  height: inherit;
+  line-height: inherit;
+  padding: .8rem 1.2rem;
+  text-transform: uppercase;
+  transition: color 150ms ease;
+
+  &:hover {
+    background: $base;
+    color: $white;
+  }
+
+  &.active {
+    background: $night;
+    color: $white;
+  }
+
+  &:focus {
+    // outline: none;
+    outline: 1px solid $dodgerblue;
+  }
+}
+
+.left-border {
+  border-left: 2px solid $ash;
+
+  &:hover {
+    border-left: 2px solid $sky;
+  }
+
+  &.active {
+    border-left: 2px solid $bright;
+  }
+}
+
+.bottom-border {
+  border-bottom: 2px solid $ash;
+
+  &:hover {
+    border-bottom: 2px solid $sky;
+  }
+
+  &.active {
+    border-bottom: 2px solid $bright;
+  }
+}
 
 .reg-logo {
   margin: auto;
@@ -114,13 +130,6 @@
   svg {
     width: 100px;
     height: 100px;
-  }
-}
-
-.nav-logo {
-
-  .logo {
-    width: 90px;
   }
 }
 
@@ -168,10 +177,50 @@
   padding: 16px;
 }
 
+.nav-logo {
+  width: 140px;
+  padding: 0 .2rem;
+}
+
+.icon {
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $white;
+  }
+}
+
+.search-icon {
+
+  svg {
+    position: absolute;
+    top: .5em;
+    right: .2em;
+    left: .4em;
+    bottom: .2em;
+  }
+}
+
+.search-wrapper {
+  margin: .5rem;
+  position: relative;
+
+  .search-input {
+    padding: .4em .4em .4em 2.1em;;
+    font-size: 18px;
+  }
+}
+
+.breadcrumbs-container {
+  margin: 0 2.2rem;
+}
+
 .breadcrumbs {
+  // font-size: 14px;
   list-style: none;
+  padding: 16px 0;
   margin: 0 1.2rem;
-  padding: 16px;
+  text-transform: lowercase;
 
   li {
     display: inline;
@@ -179,15 +228,16 @@
 
     &+li {
       &::before {
-        padding: 8px;
         color: $black;
         content: "/\00a0";
+        padding: 8px;
       }
     }
   }
 
   a {
-    color: $blue;
+    color: $brand-blue;
+    font-weight: bold;
     text-decoration: none;
 
     &:hover {

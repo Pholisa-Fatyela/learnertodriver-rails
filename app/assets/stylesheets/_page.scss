@@ -17,6 +17,10 @@
   display: inline-block;
 }
 
+.flex {
+  display: flex;
+}
+
 .button {
   background: $brand-color;
 
@@ -36,10 +40,23 @@
   }
 }
 
+.gapped {
+  margin: 2rem;
+}
+
+.split {
+  .post {
+    width: 70%;
+  }
+  .aside {
+    width: 30%;
+    margin: 0 0 0 1.3rem;
+  }
+}
+
 .content {
   background: $white;
   box-shadow: 0 0 5px rgba(0, 0, 0, .15);
-  margin: 2rem;
   padding: 2rem;
 }
 
