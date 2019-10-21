@@ -15,8 +15,10 @@
           <% if @questions.any? %>
 
             <div class="timer-area">
-              <div class="progressbar">
-                <div class="progress"></div>
+              <div class="progressbar" data-controller="progressbar">
+                <div class="progress" data-action="click->progress#update">
+                  <span class="hidded" data-target="progress.value"></span>
+                </div>
               </div>
             </div>
 
