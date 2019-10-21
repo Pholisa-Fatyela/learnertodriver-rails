@@ -13,7 +13,12 @@
 .post {
 
   &.content {
-    padding: 1.4rem 0;
+    padding: 1.4rem 0 0;
+  }
+
+  .meta {
+    background: $cream;
+    padding: .2rem 1.2rem;
   }
 }
 
@@ -32,11 +37,24 @@
 
   a {
     color: $ocean;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
+.adblock {
+  border: 1px solid $grey;
+  padding: 4px;
+}
+
+.post-container {
+  height: 100%;
+}
+
 .post-content {
-  padding: 1.5rem;
+  padding: 0 1.5rem;
 }
 
 .post-meta-container {
@@ -47,6 +65,7 @@
 }
 
 .block-meta {
+  background: $gainsboro;
   border-top: 1px solid $gainsboro;
   display: flex;
   padding: .8rem;
@@ -108,5 +127,10 @@
 
   h4 {
     text-transform: uppercase;
+  }
+
+  .bio {
+    width: 100%;
+    padding: 4rem;
   }
 }

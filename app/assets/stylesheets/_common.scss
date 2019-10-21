@@ -143,6 +143,10 @@ footer {
   }
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .irregular {
   width: 98%;
 }
@@ -219,6 +223,18 @@ footer {
   width: 100%;
 }
 
+.flex {
+  display: flex;
+
+  .row  {
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+}
+
 .spaced-between {
   justify-content: space-between;
 }
@@ -233,6 +249,10 @@ footer {
 
 .capitalized {
   text-transform: capitalize;
+}
+
+.upcase {
+  text-transform: uppercase;
 }
 
 .grey-text {
