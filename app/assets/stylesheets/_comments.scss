@@ -51,7 +51,7 @@
     border: 12px solid transparent;
     border-right-color: $flat;
     position: absolute;
-    top: 28px;
+    top: 15px;
     left: 0;
     margin-left: -24px;
   }
@@ -60,8 +60,8 @@
 .comment {
   .avatar {
     float: left;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: $grey;
     border-radius: 15%;
   }

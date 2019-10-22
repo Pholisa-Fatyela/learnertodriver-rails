@@ -20,8 +20,7 @@
 .button {
   background: $brand-color;
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     background-color: darken($brand-color, 20%);
     color: $white;
   }
@@ -36,10 +35,23 @@
   }
 }
 
+.gapped {
+  margin: 2rem;
+}
+
+.split {
+  .post {
+    width: 70%;
+  }
+  .aside {
+    width: 30%;
+    margin: 0 0 0 1.3rem;
+  }
+}
+
 .content {
   background: $white;
   box-shadow: 0 0 5px rgba(0, 0, 0, .15);
-  margin: 2rem;
   padding: 2rem;
 }
 
@@ -49,9 +61,7 @@
 }
 
 
-.heading,
-.pre-text {
-
+.heading, .pre-text {
   h1 {
     font-weight: 600;
     text-align: center;
@@ -76,7 +86,6 @@
     text-align: center;
     text-transform: uppercase;
   }
-
 }
 
 .following {
@@ -99,9 +108,11 @@
 }
 
 .stats-box {
+  background: $white;
   border: 2px $gainsboro solid;
   border-radius: 4px;
   box-sizing: border-box;
+  box-shadow: $block-shadow;
   display: flex;
   margin: auto;
   width: 80%;
@@ -114,7 +125,7 @@
   padding: 32px;
 
   .large-text {
-    font-size: 26px;
+    font-size: 36px;
   }
 
   .small-text {
@@ -135,8 +146,7 @@
   text-align: left;
   width: 30%;
 
-  p,
-  h2 {
+  p, h2 {
     color: $flat;
     text-align: center;
   }
@@ -170,7 +180,6 @@
     color: $black;
     flex: 1 0 auto;
     padding: 10px;
-
   }
 
   h2 {
@@ -179,14 +188,9 @@
   }
 }
 
-.block-meta {
-  background: $gainsboro;
-}
-
 .row {
   margin: auto;
   width: 85%;
-
 }
 
 .translucent {
@@ -222,7 +226,6 @@
 }
 
 @media screen and (min-width: 700px) {
-
   .stats-box {
     width: 70%;
     flex-direction: row;
@@ -236,7 +239,6 @@
       border-right: 2px solid $gainsboro;
       border-top: 0;
       border-bottom: 0;
-
     }
   }
 
