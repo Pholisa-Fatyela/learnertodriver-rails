@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
@@ -29,10 +29,7 @@ gem 'redis'
 gem 'bcrypt'
 
 # Use ActiveStorage variant
-# gem 'mini_magick'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'image_processing'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
@@ -88,7 +85,7 @@ gem 'bullet', group: [:development]
 gem 'derailed_benchmarks', group: [:development]
 # Profiler for your development and production Ruby rack apps.
 # https://github.com/MiniProfiler/rack-mini-profiler
-# gem 'rack-mini-profiler'
+# gem 'rack-mini-profiler', group: [:development]
 # gem 'flamegraph'
 # gem 'fast_stack'    # For Ruby MRI 2.0
 # gem 'stackprof'
@@ -103,7 +100,7 @@ gem 'derailed_benchmarks', group: [:development]
 # ### ### ### ### ### ### ### ###
 # Rails authentication with email & password. https://thoughtbot.com/open-source
 # https://github.com/thoughtbot/clearance
-# gem "clearance"
+# gem 'clearance'
 # Flexible authentication solution for Rails with Warden.
 # https://github.com/plataformatec/devise
 gem 'devise'
@@ -198,9 +195,6 @@ gem 'simple_form'
 # Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort.
 # https://github.com/sinatra/sinatra
 gem 'sinatra'
-# https://github.com/janko/image_processing
-# High-level image processing helper methods with libvips and ImageMagick/GraphicsMagick
-gem 'image_processing'
 # https://github.com/WilHall/gretel
 # Flexible Ruby on Rails breadcrumbs plugin.
 gem 'gretel'
@@ -254,11 +248,17 @@ gem 'dalli', groups: [:production]
 # ### ### ### ### ### ### ### ###
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
+
 # https://github.com/dannnylo/rtesseract
 # Ruby library for working with the Tesseract OCR
+
+# https://github.com/activerecord-hackery/ransack
+# Object-based searching
+gem 'ransack'
 
 gem 'friendly_id'
 gem 'acts_as_votable'
 gem 'bourbon'
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
+gem 'rails_admin'

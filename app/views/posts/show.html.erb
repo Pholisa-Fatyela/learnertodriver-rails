@@ -1,45 +1,62 @@
 <% content_for :page_title, @post.title %>
 <% breadcrumb :post, @post %>
 
-<article class="post content">
+<div class="flex split gapped">
+  <article class="flex spaced-between column content post">
 
-  <div class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <%= @post.title %>
-    </h1>
-  </div>
+    <div class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <%= @post.title %>
+      </h1>
+    </div>
 
-  <div class="post-content" itemprop="articleBody">
-    <%= @post.content.html_safe %>
+    <div class="post-container" itemprop="articleBody">
+      <div class="post-content">
+        <%= @post.content.html_safe %>
+      </div>
+    </div>
 
 
-    <div class="post-meta">
-      <p class="post-date">Posted <%= time_ago_in_words(@post.created_at) %> ago</p>
+    <div class="meta">
+      <p class="post-date pull-left">Posted <%= time_ago_in_words(@post.created_at) %> ago</p>
 
-        <% if @post.user == current_user -%>
+      <div class="votes pull-right">
         <div class="btn-group">
-          <%= link_to ' Edit Post ', edit_post_path(@post), class: "button fa fa-pencil-square-o" %>
-          <%= link_to ' Delete Post ', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "button fa fa-trash" %>
+          <%= link_to like_post_path(@post), method: :put, class: "vote" do %>
+
+          <span class="fa fa-thumbs-up"></span>
+            <%= @post.get_upvotes.size %>
+          <% end %>
+
+          <%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
+
+          <span class="fa fa-thumbs-down"></span>
+            <%= @post.get_downvotes.size %>
+          <% end %>
+
         </div>
-        <% end %>
-
-        <div class="btn-group pull-right">
-          <%= link_to like_post_path(@post), method: :put, class: "button btn-default btn-sm" do %>
-        <span class="fa fa-thumbs-up"></span>
-          <%= @post.get_upvotes.size %>
-        <% end %>
-
-          <%= link_to dislike_post_path(@post), method: :put, class: "button btn-default btn-sm" do %>
-        <span class="fa fa-thumbs-down"></span>
-          <%= @post.get_downvotes.size %>
-        <% end %>
-
+      </div>
     </div>
 
-    </div>
-  </div>
+  </article>
 
-</article>
+  <aside class="aside content">
+
+    <div class="search-container">
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Search">
+        <div class="search-icon icon">
+          <%= inline_svg("icons/magnifying-glass.svg") %>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-grey">
+    <h4 class="bold upcase">Sponsored Content</h4>
+     <div class="adblock">
+        <%= render 'layouts/components/google_adsense' %>
+     </div>
+  </aside>
+</div>
 
   <div class="post-meta-container">
     <div class="post-author">
@@ -81,8 +98,7 @@
     </div>
   </div>
 
-
-<article class="comments content">
+<article class="gapped comments content">
   <div class="comments-title-container">
     <h2 class="comments-title fleft"><%= @post.comments.count %> Comments</h2>
   </div>
@@ -112,5 +128,4 @@
 
     </div>
   </div>
-
 </article>

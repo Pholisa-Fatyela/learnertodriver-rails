@@ -2,20 +2,20 @@
   <h1><%= t("site_name") %></h1>
 </header>
 
-  <nav role="navigation" class="navigation">
-    <ul class="navlist">
+  <nav role="navigation" class="bottom-border dark navigation">
+    <ul class="centered navlist">
 
-      <li><%= link_to "Home", root_path, class: "#{current? "active", root_path}"%></li>
-      <li><%= link_to "Tests", quizzes_path, class: "#{current? "active", quizzes_path}"%></li>
-      <li><%= link_to "Blog", posts_path, class: "#{current? "active", posts_path}"%></li>
-      <li><%= link_to "About", page_path('about'), class: "#{current? "active", page_path('about')}"%></li>
+      <li><%= link_to "Home", root_path, class: "nav-item bottom-border #{current? "active", root_path}"%></li>
+      <li><%= link_to "Quizzes", quizzes_path, class: "nav-item bottom-border #{current? "active", quizzes_path}"%></li>
+      <li><%= link_to "Posts", posts_path, class: "nav-item bottom-border #{current? "active", posts_path}"%></li>
+      <li><%= link_to "About", page_path('about'), class: "nav-item bottom-border #{current? "active", page_path('about')}"%></li>
     </ul>
   </nav>
   
   <div class="secondary-nav">
-    
-    <%= breadcrumbs separator: " / " %>
-
+    <div class="breadcrumbs-container">
+      <%= breadcrumbs separator: " / " %>
+    </div>
     <!-- search -->
     <div class="search-container">
       <div class="search-wrapper">

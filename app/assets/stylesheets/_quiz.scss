@@ -1,21 +1,19 @@
 .progressbar {
   width: 98%;
   height: 17px;
-  background-color: $clean;
-  // padding: 5px;
+  background-color: #ddd;
   margin: .6em 0;
-  border: 1px double $slate;
+  border: 1px double #bbb;
   border-radius: 5px;
-  clear: both;
-  box-shadow: 0 1px 5px $slate inset, 0 1px 0 $gainsboro;
+  box-shadow: 0 1px 5px #bbb inset, 0 1px 0 #dcdcdc;
 }
 
 .progress {
-background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);  border-radius: 5px;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border-radius: 5px;
   height: 15px;
   width: 0;
   max-width: 100%;
   float: left;
   width: 50%;
 }
-
