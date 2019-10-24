@@ -3,6 +3,7 @@ puts "... creating Specifications 🔖"
 all_quizzes = Quiz.ids
 all_questions = Question.all
 
-all_quizzes.each do |quiz|
+Quiz.all.each do |quiz|
   quiz.questions = all_questions
+  quiz.save!
 end
