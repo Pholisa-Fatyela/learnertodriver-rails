@@ -8,6 +8,10 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
+  config.authorize_with do
+   redirect_to main_app.root_path unless warden.user.admin == true
+  end
+
   ## == CancanCan ==
   # config.authorize_with :cancancan
 
