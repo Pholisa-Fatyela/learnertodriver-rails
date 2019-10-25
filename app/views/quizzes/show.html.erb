@@ -10,8 +10,6 @@
           </div>
         </div>
 
-        <div class="quiz-area">
-
           <% if @questions.any? %>
 
             <div class="timer-area">
@@ -21,8 +19,15 @@
                 </div>
               </div>
             </div>
-
+          <div class="quiz-area" id="quiz">
+          
             <%= render :partial => @questions %>
+
+          <div class="controls">
+            <div class="button">Next</div>
+            <div class="button">Previous</div>
+            <div class="button hidden">Submit</div>
+          </div>
 
           <% else %>
 
