@@ -4,8 +4,6 @@ class CreateAnswers < ActiveRecord::Migration[5.2]
       t.string :content
       t.string :explanation
       t.references :correct, foreign_key: { to_table: :answers }, index: true
-
-      t.timestamps
     end
   end
 end
