@@ -22,7 +22,7 @@ export default class extends Controller {
   showQuestion(index) {
     this.index = index
     this.questionTargets.forEach((el, i) => {
-      el.classList.toggle(".active", index == i)
+      el.classList.toggle('active', index == i)
     })
   }
 }
