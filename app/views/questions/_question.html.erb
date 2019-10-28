@@ -1,7 +1,7 @@
-<div class="question-area hidden">
-  <div class="question">
+<div class="question-area" data-controller="quiz">
+  <div class="question" data-target="quiz.question">
 
-    <h1 class="question-head">Question <span id="questionNumber">#</span></h1>
+    <h1 class="question-head">Question <span>#</span></h1>
     <h2 class="question-content"><%= question.content %></h2>
 
     <ul class="choices">
@@ -13,4 +13,10 @@
     </ul>
 
   </div>
+
+  <div class="controls" id="controls">
+    <button data-action="quiz#previous">Previous ←</button>
+    <button data-action="quiz#next">Next →</button>
+  </div>
+
 </div>

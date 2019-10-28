@@ -5,6 +5,6 @@ export default class extends Controller {
   static targets = ['menu'];
 
   toggle(event) {
-      this.menuTarget.classList.toggle('active');
+    this.menuTarget.classList.toggle('active');
   }
 }

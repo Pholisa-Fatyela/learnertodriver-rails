@@ -19,6 +19,12 @@
 }
 
 .quiz-area {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
   .controls {
     margin: 2rem 0 0;
   }
