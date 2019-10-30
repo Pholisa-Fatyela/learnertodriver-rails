@@ -94,7 +94,8 @@ answer_list = [
                 ["Switch on your indicator and change lanes.", "dd" ],
                 [" Give the necessary signal after looking for other traffic, change lanes.", "dd" ],
                 ["Take a selfie", "dd" ],
-                ["Apply the brakes lightly and then change lanes.", "dd" ]
+                ["Apply the brakes lightly and then change lanes.", "dd" ],
+                ["All of the above", "dd" ]
               ]
 
 answer_list.map do |answer|
