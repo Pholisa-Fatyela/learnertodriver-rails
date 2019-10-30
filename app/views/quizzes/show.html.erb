@@ -6,7 +6,7 @@
 
         <div class="post-header">
           <div class="heading">
-            <h1><%= @quiz.title %> Test</h1>
+            <h1><%= @quiz.title %></h1>
           </div>
         </div>
 
@@ -15,12 +15,13 @@
             <div class="timer-area">
               <div class="progressbar" data-controller="progressbar">
                 <div class="progress" data-action="click->progress#update">
-                  <span class="hidded" data-target="progress.value"></span>
+                  <span class="hidden" data-target="progress.value"><%= @quiz.duration %></span>
                 </div>
               </div>
             </div>
-          <div class="quiz-area" id="quiz" data-controller="quiz">
-          
+
+          <div class="quiz-area" id="quiz" data-controller="quiz" data-quiz-index="0">
+
             <%= render :partial => @questions %>
 
           <% else %>

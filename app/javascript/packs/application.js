@@ -18,6 +18,7 @@ import * as pwa from './utils/pwa.js';
 import * as ServiceWorker from './utils/service_worker.js';
 import * as ApexCharts from './helpers/chart.js';
 import * as TimeAgo from './helpers/time_date.js';
+import * as Quiz from './app/quiz.js';
 
 require("trix")
 require("@rails/actiontext")

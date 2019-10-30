@@ -4,33 +4,45 @@ export default class extends Controller {
   static targets = [ 'question', 'output' ]
 
   initialize() {
-    this.showQuestion(0)
+    this.showCurrentQuestion();
+    this.updateQuestionNumber();
   }
 
   next() {
-    this.showQuestion(this.index + 1)
-    this.updateProgress()
+    let lastItem = this.questionTargets.length - 1;
+    if (this.index < lastItem ) {
+      this.index++
+    } else {
+        console.log("end of Quiz");
+   }
   }
 
   previous() {
-    this.showQuestion(this.index - 1)
+    if (this.index > 0) {
+      this.index--
+    } else {
+        console.log("start Quiz");
+    }
   }
 
-  sumbitQuiz(event) {
-    this.endQuiz()
-  }
-
-  updateProgress(index) {
-    this.outputTarget.textContent = "11"
-  }
-
-  endQuiz() {
-  }
-
-  showQuestion(index) {
-    this.index = index
-    this.questionTargets.forEach((el, i) => {
-      el.classList.toggle('active', index == i)
+  updateQuestionNumber() {
+    this.outputTargets.forEach((el, i) => {
+      el.innerText = i+1
     })
+  }
+
+  showCurrentQuestion() {
+    this.questionTargets.forEach((el, i) => {
+      el.classList.toggle('active', this.index == i)
+    })
+  }
+
+  get index() {
+    return parseInt(this.data.get('index'))
+  }
+
+  set index(value) {
+    this.data.set('index', value)
+    this.showCurrentQuestion()
   }
 }
