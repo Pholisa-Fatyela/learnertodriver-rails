@@ -12,7 +12,7 @@
 
     <div class="post-container" itemprop="articleBody">
       <div class="post-content">
-        <%= @post.content.html_safe %>
+<%= @post.content.html_safe %>
       </div>
     </div>
 
@@ -66,24 +66,27 @@
           <div class="author avatar">
             <%= image_tag gravatar_url(@post.user.email, :size=> 300), alt: 'profile', class: "author avatar" %>
           </div>
-          <div class="author username">
+
+          <div class="capitalized author username">
             <h3><%= link_to @post.user.name, user_path(@post.user) %></h3>
           </div>
+
           <div class="author bio">
             <p><%= @post.user.bio %></p>
           </div>
           <div class="author social">
             <div class="flex centered">
-          <% if @post.user.social_link %>
-              <%= link_to "https://twitter.com/#{ @post.user.social_link}", target: "_blank" do %>
+
+          <% if @post.user.social_link_twitter %>
+              <%= link_to "https://twitter.com/#{ @post.user.social_link_twitter}", target: "_blank" do %>
                 <div class="twitter icon">
                   <%= inline_svg("twitter.svg") %>
                 </div>
               <% end %>
            <% end %>
 
-          <% if @post.user.portfolio_link %>
-              <%= link_to "https://instagram.com/#{ @post.user.portfolio_link }", target: "_blank" do %>
+          <% if @post.user.social_link_instagram %>
+              <%= link_to "https://instagram.com/#{ @post.user.social_link_instagram }", target: "_blank" do %>
                 <div class="insta icon">
                   <%= inline_svg("instagram.svg") %>
                 </div>
