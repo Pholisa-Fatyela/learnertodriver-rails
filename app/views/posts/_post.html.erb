@@ -3,7 +3,6 @@
     <h2 class="post-title"><%= link_to truncate(post.title, :length => 65), post %></h2>
   </div>
   <div class="block-content">
-
     <p><%= truncate(strip_tags(post.content.to_s), length: 165) %></p>
     <div class="link">
       <%= link_to "Read More >", post, class: "read-more" %>

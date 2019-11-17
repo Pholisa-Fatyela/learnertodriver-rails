@@ -1,8 +1,12 @@
 <% @user.posts.each do |post| %>
   <div class="main content block">
-    <div class="block-header">
-      <h2><%= link_to truncate(post.title, :length => 65), post %></h2>
+
+    <div class="post-header">
+      <h2 class="text-center post-title" itemprop="name headline">
+        <%= link_to truncate(post.title, :length => 65), post %>
+      </h2>
     </div>
+
     <div class="block-content">
       <p><%= truncate(strip_tags(post.content.to_s), length: 65) %></p>
       <%= link_to "Read More", post, class: "read-more" %>
