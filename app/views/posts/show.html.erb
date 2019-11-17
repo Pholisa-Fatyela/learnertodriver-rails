@@ -5,20 +5,27 @@
   <article class="flex spaced-between column content post">
 
     <div class="post-header">
-      <h1 class="post-title" itemprop="name headline">
+      <h1 class="text-center post-title" itemprop="name headline">
         <%= @post.title %>
       </h1>
     </div>
 
     <div class="post-container" itemprop="articleBody">
+      <% if current_user == @post.user %>
+        <%= link_to "Edit", edit_post_path(@post), class: "small pull-right button" %>
+      <% end %>
+
       <div class="post-content">
-        <%= @post.content.html_safe %>
+        <%= @post.content %>
       </div>
     </div>
 
 
     <div class="meta">
-      <p class="post-date pull-left">Posted <%= time_ago_in_words(@post.created_at) %> ago</p>
+      <p class="small post-date pull-left">
+        Published <%= time_ago_in_words(@post.created_at) %> ago
+      <br>
+      </p>
 
       <div class="votes pull-right">
         <div class="btn-group">
@@ -40,6 +47,7 @@
 
   </article>
 
+<!-- post sidebar -->
   <aside class="aside content">
 
     <div class="search-container">
@@ -55,7 +63,12 @@
      <div class="adblock">
         <%= render 'layouts/components/google_adsense' %>
      </div>
+     <br>
+    <h4 class="bold upcase">Recent Activity</h4>
+     <div class="sidebar-news-feed">
+     </div>
   </aside>
+
 </div>
 
   <div class="post-meta-container">
@@ -66,24 +79,27 @@
           <div class="author avatar">
             <%= image_tag gravatar_url(@post.user.email, :size=> 300), alt: 'profile', class: "author avatar" %>
           </div>
-          <div class="author username">
+
+          <div class="capitalized author username">
             <h3><%= link_to @post.user.name, user_path(@post.user) %></h3>
           </div>
+
           <div class="author bio">
             <p><%= @post.user.bio %></p>
           </div>
           <div class="author social">
             <div class="flex centered">
-          <% if @post.user.social_link %>
-              <%= link_to "https://twitter.com/#{ @post.user.social_link}", target: "_blank" do %>
+
+          <% if @post.user.social_link_twitter %>
+              <%= link_to "https://twitter.com/#{ @post.user.social_link_twitter}", target: "_blank" do %>
                 <div class="twitter icon">
                   <%= inline_svg("twitter.svg") %>
                 </div>
               <% end %>
            <% end %>
 
-          <% if @post.user.portfolio_link %>
-              <%= link_to "https://instagram.com/#{ @post.user.portfolio_link }", target: "_blank" do %>
+          <% if @post.user.social_link_instagram %>
+              <%= link_to "https://instagram.com/#{ @post.user.social_link_instagram }", target: "_blank" do %>
                 <div class="insta icon">
                   <%= inline_svg("instagram.svg") %>
                 </div>
@@ -122,7 +138,7 @@
       <div class="field">
         <%= f.text_area :body, class: "form-control" %>
       </div>
-    <br>
+
         <%= f.submit "Post Comment", class: "button btn-primary" %>
     <% end %>
 
