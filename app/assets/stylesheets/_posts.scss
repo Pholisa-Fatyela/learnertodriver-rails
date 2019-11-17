@@ -10,13 +10,16 @@
     margin-bottom: 1.4rem;
   }
 
-  blockquote:before, blockquote:after {
-    content: "";
-    display: block;
-    width: 30%;
-    height: 3px;
-    background: $grey;
-    margin: 40px auto;
+  blockquote {
+
+    &:before,&:after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 3px;
+      background: $grey;
+      margin: 40px auto;
+    }
   }
 
 ul {
@@ -25,8 +28,8 @@ ul {
 }
 
 ol {
-  list-style-type: lower-alpha;
-}
+    list-style-type: lower-alpha;
+  }
 }
 
 .posts {
