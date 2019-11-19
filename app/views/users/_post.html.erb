@@ -1,23 +1,27 @@
 <% @user.posts.each do |post| %>
-	<div class="main content block">
-		<div class="block-header">
-			<h2><%= link_to truncate(post.title, :length => 65), post %></h2>
-		</div>
-		<div class="block-content">
-			<p><%= post.content.truncate(165).html_safe %></p>
-			<%= link_to "Read More", post, class: "read-more" %>
-		</div>
-		<div class="block-meta">
-			<div class="meta-date">
-				<span class="fa fa-clock-o"></span><%= time_ago_in_words(post.created_at) %> ago
-			</div>
-			<div class="meta-votes">
-				<span class="fa fa-thumbs-up"></span><%= post.get_upvotes.size %>
-				<span class="fa fa-thumbs-down"></span><%= post.get_downvotes.size %>
-			</div>
-			<div class="meta-comments">
-				<span class="fa fa-comments"></span> <%= post.comments.count %>
-			</div>
-		</div>
-	</div>
+  <div class="main content block">
+
+    <div class="post-header">
+      <h2 class="text-center post-title" itemprop="name headline">
+        <%= link_to truncate(post.title, :length => 65), post %>
+      </h2>
+    </div>
+
+    <div class="block-content">
+      <p><%= truncate(strip_tags(post.content.to_s), length: 65) %></p>
+      <%= link_to "Read More", post, class: "read-more" %>
+    </div>
+    <div class="block-meta">
+      <div class="meta-date">
+        <span class="fa fa-clock-o"></span><%= time_ago_in_words(post.created_at) %> ago
+      </div>
+      <div class="meta-votes">
+        <span class="fa fa-thumbs-up"></span><%= post.get_upvotes.size %>
+        <span class="fa fa-thumbs-down"></span><%= post.get_downvotes.size %>
+      </div>
+      <div class="meta-comments">
+        <span class="fa fa-comments"></span> <%= post.comments.count %>
+      </div>
+    </div>
+  </div>
 <% end %>

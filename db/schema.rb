@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_233143) do
+ActiveRecord::Schema.define(version: 2019_11_17_134728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,8 +50,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
     t.string "content"
     t.string "explanation"
     t.bigint "correct_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["correct_id"], name: "index_answers_on_correct_id"
   end
 
@@ -79,7 +77,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -98,10 +95,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
   create_table "questions", force: :cascade do |t|
     t.string "content"
     t.string "explanation"
-    t.bigint "quiz_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -120,8 +113,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
   create_table "responses", force: :cascade do |t|
     t.bigint "question_id"
     t.bigint "answer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["answer_id"], name: "index_responses_on_answer_id"
     t.index ["question_id"], name: "index_responses_on_question_id"
   end
@@ -154,7 +145,8 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.string "social_link"
+    t.string "social_link_twitter"
+    t.string "social_link_instagram"
     t.string "portfolio_link"
     t.text "bio"
     t.date "birthday"
@@ -185,7 +177,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_233143) do
   add_foreign_key "answers", "answers", column: "correct_id"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "questions", "quizzes"
   add_foreign_key "responses", "answers"
   add_foreign_key "responses", "questions"
   add_foreign_key "specifications", "questions"

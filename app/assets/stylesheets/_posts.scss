@@ -1,3 +1,37 @@
+.post-container {
+  height: 100%;
+  padding: 1.2rem;
+}
+
+.post-content {
+  padding: 0 1.5rem;
+
+  .post-header {
+    margin-bottom: 1.4rem;
+  }
+
+  blockquote {
+
+    &:before,&:after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 3px;
+      background: $grey;
+      margin: 40px auto;
+    }
+  }
+
+ul {
+  list-style-type: initial;
+  margin: 0 2rem;
+}
+
+ol {
+    list-style-type: lower-alpha;
+  }
+}
+
 .posts {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +62,7 @@
 
 .post-header {
   border-bottom: 1px solid $shades;
-  margin-bottom: 1.4rem;
+  // margin-bottom: 1.4rem;
 }
 
 .post-title {
@@ -47,14 +81,6 @@
 .adblock {
   border: 1px solid $grey;
   padding: 4px;
-}
-
-.post-container {
-  height: 100%;
-}
-
-.post-content {
-  padding: 0 1.5rem;
 }
 
 .post-meta-container {

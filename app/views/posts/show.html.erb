@@ -5,20 +5,27 @@
   <article class="flex spaced-between column content post">
 
     <div class="post-header">
-      <h1 class="post-title" itemprop="name headline">
+      <h1 class="text-center post-title" itemprop="name headline">
         <%= @post.title %>
       </h1>
     </div>
 
     <div class="post-container" itemprop="articleBody">
+      <% if current_user == @post.user %>
+        <%= link_to "Edit", edit_post_path(@post), class: "small pull-right button" %>
+      <% end %>
+
       <div class="post-content">
-<%= @post.content.html_safe %>
+        <%= @post.content %>
       </div>
     </div>
 
 
     <div class="meta">
-      <p class="post-date pull-left">Posted <%= time_ago_in_words(@post.created_at) %> ago</p>
+      <p class="small post-date pull-left">
+        Published <%= time_ago_in_words(@post.created_at) %> ago
+      <br>
+      </p>
 
       <div class="votes pull-right">
         <div class="btn-group">
@@ -40,6 +47,7 @@
 
   </article>
 
+<!-- post sidebar -->
   <aside class="aside content">
 
     <div class="search-container">
@@ -55,7 +63,12 @@
      <div class="adblock">
         <%= render 'layouts/components/google_adsense' %>
      </div>
+     <br>
+    <h4 class="bold upcase">Recent Activity</h4>
+     <div class="sidebar-news-feed">
+     </div>
   </aside>
+
 </div>
 
   <div class="post-meta-container">
@@ -125,7 +138,7 @@
       <div class="field">
         <%= f.text_area :body, class: "form-control" %>
       </div>
-    <br>
+
         <%= f.submit "Post Comment", class: "button btn-primary" %>
     <% end %>
 

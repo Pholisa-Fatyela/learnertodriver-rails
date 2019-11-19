@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+trix-editor {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0.4em 0.6em;
+  min-height: 5em;
+  outline: none;
+  }
+
+trix-toolbar * {
+  box-sizing: border-box;
+}
