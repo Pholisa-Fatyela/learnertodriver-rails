@@ -7,7 +7,7 @@ set :repo_url, "git@github.com:Siyanda/learnertodriver-rails.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# Default deploy_to directory is /var/www/my_app_name
+# Default deploy_to directory is /var/www/{app_name}
 set :deploy_to, "/var/www/learnertodriver.co.za/src"
 
 # Default value for :format is :airbrussh.

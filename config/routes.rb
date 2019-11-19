@@ -14,7 +14,6 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     unlocks: 'users/unlocks',
     registrations: 'users/registrations'
-
   },
   :path => '/',
   :path_names => {

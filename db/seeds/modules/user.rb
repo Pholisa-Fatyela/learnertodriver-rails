@@ -1,20 +1,5 @@
 puts "... creating Users 🔖"
 
-User.create!(
-    name: "Siyanda Maphumulo",
-    first_name: "Siyanda",
-    last_name: "Maphumulo",
-    username: "maphumulops",
-    email: "demo@demo.com",
-    password: "admin1234",
-    confirmed_at: Faker::Date.backward(days: 14),
-    bio: "Rails Dev,admin user",
-    slug: "maphumulops",
-    admin: true
-    )
-
-puts "#{ User.count } admin user created"
-
 50.times do |u|
     User.create!(
     name: "",

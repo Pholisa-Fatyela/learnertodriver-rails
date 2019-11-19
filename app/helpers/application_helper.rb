@@ -1,5 +1,7 @@
 module ApplicationHelper
-  #Gravatar
+  # check if avatar has been uploaded first
+
+  # Gravatar
   def gravatar_url(email,options = {})
     require 'digest/md5'
     hash = Digest::MD5.hexdigest(email)
@@ -13,7 +15,7 @@ module ApplicationHelper
     url
   end
 
-  #  "active" classes for menu links 
+  # "active" classes for menu links 
 
   def current?(key, path)
      "#{key}" if current_page? path
