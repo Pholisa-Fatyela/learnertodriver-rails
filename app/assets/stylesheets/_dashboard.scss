@@ -224,7 +224,7 @@ hr {
   font-weight: 600;
   
   &.active {
-
+    border: 1px solid $slate;
   }
 
   &:hover {
@@ -238,38 +238,32 @@ hr {
 }
 
 // 480px
-
 @media screen and (min-width: 480px) {
 
 }
 
 // 580px
-
 @media screen and (min-width: 580px) {
 
 
 }
 
 // 580px
-
 @media screen and (max-width: 580px) {
 
 }
 
 // 700px
-
 @media screen and (min-width: 700px) { 
 
 }
 
 // 750px
-
 @media screen and (max-width: 750px) {
 
 }
 
 // 1200px
-
 @media screen and (min-width: 1200px) {
 
   .split-layout-primary {
@@ -279,7 +273,6 @@ hr {
 
 
 // 1600px
-
 @media screen and (min-width: 1600px) {
 
   .split-layout-primary {
@@ -301,7 +294,6 @@ hr {
 }
 
 // 890px
-
 @media screen and (min-width: 890px) {
 
 
