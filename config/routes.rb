@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # sidekiq web interface
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq' 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root 'landing#index'
 
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     unlocks: 'users/unlocks',
     registrations: 'users/registrations'
-
   },
   :path => '/',
   :path_names => {

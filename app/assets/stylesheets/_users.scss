@@ -55,6 +55,35 @@
 .nav-profile {
   display: flex;
   align-items: center;
+
+  svg {
+    fill: $white;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.svg-icon {
+  padding: .4rem 1.2rem;
+  cursor: pointer;
+  position: relative;
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    transition: background-color .5s ease-out;
+
+  &.active {
+      background-color: $crimson;
+    }
+
+  &.inactive {
+      background-color: $transparent;
+    }
+  }
 }
 
 .nav-logo,
@@ -83,11 +112,11 @@
 .nav-avatar {
   cursor: pointer;
   display: block;
-  margin: .4rem .8rem .1rem 1.3rem;
+  margin: 0 .1rem 0 .8rem;
 
   img {
-    min-width: 51px;
-    height: 51px;
+    min-width: 40px;
+    height: 40px;
     border-radius: 10%;
     background: $grey;
   }
@@ -99,13 +128,13 @@
 
 
 .menu-container {
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out;
 
   &.active {
-    visibility: visible;
     opacity: 1;
-    transition: .3s ease-in-out;
+    visibility: visible;
   }
 }
 
@@ -125,12 +154,12 @@
     color: $ocean;
     display: block;
     width: 100%;
-    padding: .4rem;
+    padding: .8rem;
+    transition: background-color .1s ease-in;
 
     &:hover {
-      background-color: $blue;
-      color: $flat;
-      transition: .1s ease-in;
+      background-color: $brand-blue;
+      color: $white;
     }
   }
 
@@ -140,7 +169,7 @@
     border-bottom-color: $slate;
     content: "";
     display: inline-block;
-    left: 73px;
+    left: 100px;
     position: absolute;
     top: -16px;
   }

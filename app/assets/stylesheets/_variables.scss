@@ -53,7 +53,6 @@ $fresh-sky: #04befe;
 $indigo: #5c6bc0;
 $bright: #00f2fe;
 $bright-blue: #0cc;
-$carbon: #333f4f;
 $ocean: #1b1b26;
 $deepsea: #2f3242;
 $mercury: #2b303b;
@@ -81,8 +80,8 @@ $charcoal: #26272c;
 $yellow: #fee902;
 $purple: #632286;
 $light-blue: #4cbeff;
-$cream: #efefef;
-$flat: #f5f5f5;
+$cream: #f5f5f5;
+$flat: #efefef;
 $border: #4a4a4a;
 $pencil: #757575;
 $mca-purple: #46065c;
@@ -101,7 +100,7 @@ $alt-brand: #007299;
 $deep-blue: #4cbeff;
 $mid-base: #5f6975;
 $mid-color: #4b545f;
-$brand-blue: #1e90ff;
+$brand-blue: #005a84;
 $brand-white: #f1f1f1;
 $sky-blue: #00bfff;
 $alt-grey: #4a4b4a;
@@ -116,6 +115,7 @@ $clear-grey: rgba(60, 60, 60, .2);
 $clear-black: rgba(66, 66, 66, .1);
 $clear-white: rgba(255, 255, 255, .2);
 $translucent: rgba(0, 0, 0, .2);
+$transparent: rgba(0, 0, 0, 0);
 $light-grey: rgba(0, 0, 0, .5);
 $light-black: rgba(0, 0, 0, .7);
 
@@ -127,7 +127,6 @@ $light-blue: lighten($blue, 5%);
 $dark-blue: darken($brand-blue, 25%);
 $dodge-blue: darken($brand-blue, 45%);
 $dark-ocean: darken($blue, 25%);
-
 
 $color-base: #fff;
 $color-accent: #00b6e3;
@@ -148,7 +147,6 @@ $shadow-text: 0 0 6px rgba($black, .3);
 $shadow-box: inset 0 1px 0 0 rgba($slate, .35);
 $nav-box: 0 3px 9px rgba($black, .35);
 $full-box: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
-
 
 // Gradients
 

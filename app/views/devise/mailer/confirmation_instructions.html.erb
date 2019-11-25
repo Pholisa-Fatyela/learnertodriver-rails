@@ -1,5 +1,91 @@
-<p>Welcome <%= @email %>!</p>
+<style type="text/css">
+  body,
+  html, 
+  .body {
+    background: #f3f3f3 !important;
+  }
+  .container.header {
+    background: #f3f3f3;
+  }
+  .body-drip {
+    border-top: 8px solid #663399;
+  }
+</style>
 
-<p>You can confirm your account email through the link below:</p>
+<!-- move the above styles into your custom stylesheet -->
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<spacer size="16"></spacer>
+
+<container class="header">
+  <row class="collapse">
+    <columns>
+      <img src="" alt="">
+    </columns>
+  </row>
+</container>
+
+<container class="body-drip">
+
+  <spacer size="16">
+  </spacer>
+
+  <center>
+    <img src="" alt="">
+  </center>
+
+  <spacer size="16">
+  </spacer>
+
+  <row>
+    <columns>
+      <h4 class="text-center">Responsive Emails</h4>
+      <p class="text-center">15 sections | 567 Min</p>
+    </columns>
+  </row>
+
+  <hr/>
+
+  <row>
+    <columns>
+      <p class="text-center">To confirm your email address "<%= @email %>", please click on the link below:</p>
+      <center>
+        <%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %>
+        <button href="#" class="success">Confirm Email</button>
+      </center>
+    </columns>
+  </row>
+
+  <row class="collapsed footer">
+    <columns>
+      <spacer size="16"></spacer>
+      <p class="text-center">@copywrite nobody<br/>
+      <a href="#">hello@nocopywrite.com</a> | <a href="#">Manage Email Notifications</a> | <a href="#">Unsubscribe</a></p>
+      <center>
+        <menu>
+
+          <item>
+            <img src="#" alt="">
+          </item>
+
+          <item>
+            <img src="#" alt="">
+          </item>
+
+          <item>
+            <img src="#" alt="">
+          </item>
+
+          <item>
+            <img src="#" alt="">
+          </item>
+
+          <item>
+            <img src="#" alt="">
+          </item>
+        </menu>
+
+      </center>
+    </columns>
+  </row>
+
+</container>

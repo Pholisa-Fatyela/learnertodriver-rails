@@ -2,21 +2,22 @@
   <h1><%= t("site_name") %></h1>
 </header>
 
-  <nav role="navigation" class="navigation">
-    <ul class="navlist">
-
-      <li><%= link_to "Home", root_path, class: "#{current? "active", root_path}"%></li>
-      <li><%= link_to "Tests", quizzes_path, class: "#{current? "active", quizzes_path}"%></li>
-      <li><%= link_to "Blog", posts_path, class: "#{current? "active", posts_path}"%></li>
-      <li><%= link_to "About", page_path('about'), class: "#{current? "active", page_path('about')}"%></li>
+  <nav role="navigation" class="bottom-border dark navigation">
+    <ul class="centered navlist">
+      <li><%= link_to "Home", root_path, class: "nav-item bottom-border #{current? "active", root_path}"%></li>
+      <li><%= link_to "Quizzes", quizzes_path, class: "nav-item bottom-border #{current? "active", quizzes_path}"%></li>
+      <li><%= link_to "Posts", posts_path, class: "nav-item bottom-border #{current? "active", posts_path}"%></li>
+      <li><%= link_to "About", page_path('about'), class: "nav-item bottom-border #{current? "active", page_path('about')}"%></li>
     </ul>
   </nav>
   
   <div class="secondary-nav">
-    
-    <%= breadcrumbs separator: " / " %>
+    <div class="breadcrumbs-container">
+      <%= breadcrumbs separator: " / " %>
+    </div>
 
     <!-- search -->
+
     <div class="search-container">
       <div class="search-wrapper">
       </div>
@@ -37,31 +38,33 @@
           <div class="menu-container" data-target="dropdown.menu">
             <ul class="user-menu">
 
-              <li><%= link_to user_path(current_user), class: 'user-menu-link' do %>
-                <i class="fa fa-user"></i> Profile
-                  <% end %>
+              <li>
+                <%= link_to user_path(current_user), class: 'user-menu-link' do %>
+                  <i class="fa fa-user"></i> Profile
+                <% end %>
               </li>
 
               <div class="divider"></div>
-              <li><%= link_to destroy_user_session_path, class: 'user-menu-link', :method => :delete  do %>
-                <i class="fa fa-power-off"></i> Log Out
-              <% end %>
+
+              <li>
+                <%= link_to destroy_user_session_path, class: 'user-menu-link', :method => :delete  do %>
+                  <i class="fa fa-power-off"></i> Log Out
+                <% end %>
               </li>
 
             </ul>
           </div>
         </div>
-
     </div>
 
       <% else %>
 
         <div class="header-links">
-          
+
           <%= link_to new_user_session_path, class: 'nav-link noline' do %>
             Sign In
           <% end %>
- 
+
           <span class="grey-text">or</span>
           
           <%= link_to new_user_registration_path, class: 'nav-link outline' do %>
@@ -71,6 +74,6 @@
         </div>
 
       <% end %>
-      
+
     </div>
   </div>

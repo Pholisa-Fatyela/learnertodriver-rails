@@ -16,6 +16,11 @@ html {
   flex-direction: column;
   height: 100%;
   width: 100%;
+
+  &.debug * {
+    background: rgba(255, 0, 0, .1);
+    box-shadow: 0 0 0 1px $border;
+  }
 }
 
 *,
@@ -63,6 +68,14 @@ footer {
   margin: auto 0 0;
   padding: 10px;
   width: 100%;
+}
+
+.footer {
+  padding: 1.2rem;
+
+  p {
+    margin: 0;
+  }
 }
 
 .container {
@@ -130,6 +143,10 @@ footer {
   }
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .irregular {
   width: 98%;
 }
@@ -162,32 +179,32 @@ footer {
   text-align: right;
 }
 
+.top-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.bottom-fixed {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 .fixed {
   position: fixed;
   
   &.top {
     top: 0;
   }
-
   &.bottom {
     bottom: 0;
   }
 }
 
-.flex {
-  display: flex;
-
-  &.centered {
-    justify-content: center;
-  }
-
-  &.spaced-between {
-    justify-content: space-between;
-  }
-
-  &.spaced-around {
-    justify-content: space-around;
-  }
+.padded {
+  padding: .2rem 1.2rem;
 }
 
 .hidden {
@@ -198,13 +215,72 @@ footer {
   opacity: 0;
 }
 
+.full-height {
+  min-height: 100vh;
+}
+
 .full-width {
   width: 100%;
 }
 
+.flex {
+  display: flex;
+
+  .row  {
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  &.start {
+    align-items: flex-start;
+  }
+
+  &.baseline {
+    align-items: baseline;
+  }
+}
+
+.spaced-between {
+  justify-content: space-between;
+}
+
+.spaced-around {
+  justify-content: space-around;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.upcase {
+  text-transform: uppercase;
+}
+
 .grey-text {
   color: $gray;
-  margin: 0 10px;
+}
+
+.white-text {
+  color: $white;
+}
+
+.light-text {
+  color: $cream;
+}
+
+.dark-text {
+  color: $night;
+}
+
+.red-text {
+  color: $ruby;
 }
 
 .center {
@@ -241,15 +317,19 @@ footer {
 }
 
 .dark {
-  background: $night;
+  background-color: $ocean;
+}
+
+.night {
+  background-color: $night
 }
 
 .light {
-  background: $slate;
+  background-color: $slate;
 }
 
 .cream {
-  background: $cream;
+  background-color: $cream;
 }
 
 .yellow {

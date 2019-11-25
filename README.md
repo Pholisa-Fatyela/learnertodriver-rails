@@ -14,7 +14,7 @@
 <br/>
 <p align="center">
   <a href="https://www.ruby-lang.org/en/">
-    <img src="https://img.shields.io/badge/Ruby-v2.6.3-green.svg" alt="ruby version"/>
+    <img src="https://img.shields.io/badge/Ruby-v2.6.4-green.svg" alt="ruby version"/>
   </a>
   <a href="http://rubyonrails.org/">
     <img src="https://img.shields.io/badge/Rails-v6.0.0-brightgreen.svg" alt="rails version"/>
@@ -33,12 +33,11 @@
 1.  Fork invoiced-rsa repository, ie. https://github.com/siyanda/invoiced-rsa/fork
 1.  Clone your forked repository, ie. `git clone https://github.com/<your-username>/learnertodriver-rails.git`
 1.  `gem install bundler`
-1.  `gem install foreman`
 1.  `bundle install`
 
 #### Starting the application
 
-1.  `foreman start`
+1.  `rails s`
 
 <br/>
 

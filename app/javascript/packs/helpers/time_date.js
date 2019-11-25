@@ -9,7 +9,7 @@ document.addEventListener("turbolinks:load", function() {
 
   let formatedDate = formatDistanceToNow(
     new Date(parseISO(dateText, 1)),
-    {addSuffix: true}
+    { addSuffix: true }
   )
   // render
   dateContainer.innerHTML = formatedDate;
