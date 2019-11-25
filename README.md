@@ -4,7 +4,7 @@
     <img
       alt="Learner to Driver"
       src="https://typographics.co.za/svg/logos/learnertodriver.svg"
-      width=200px
+      width="200px"
     />
   </a>
   <br/>
