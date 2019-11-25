@@ -11,15 +11,17 @@
   }
 
   blockquote {
+    font-weight: 500;
+    font-size: 20px;
 
-    &:before,&:after {
-      content: "";
-      display: block;
-      width: 30%;
-      height: 3px;
-      background: $grey;
-      margin: 40px auto;
-    }
+      &:before,&:after {
+        content: "";
+        display: block;
+        width: 30%;
+        height: 3px;
+        background: $grey;
+        margin: 40px auto;
+      }
   }
 
 ul {
