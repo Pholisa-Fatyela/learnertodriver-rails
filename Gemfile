@@ -69,8 +69,11 @@ end
 # #### #### #### #### #### #### #### #### #### #### #### #### #### #### #### ###
 
 # ### ### ### ### ### ### ### ###
-# Benchmarking
+# Benchmarking & Monitoring
 # ### ### ### ### ### ### ### ###
+# https://github.com/skylightio/skylight-ruby
+# Skylight agent for Ruby https://www.skylight.io/
+gem 'skylight'
 # https://github.com/getsentry/raven-ruby
 # Raven is a Ruby client for Sentry https://getsentry.com
 gem 'sentry-raven'

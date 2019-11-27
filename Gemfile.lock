@@ -436,6 +436,10 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
+    skylight (4.2.0)
+      skylight-core (= 4.2.0)
+    skylight-core (4.2.0)
+      activesupport (>= 4.2.0)
     spring (2.1.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -548,6 +552,7 @@ DEPENDENCIES
   sidekiq-scheduler
   simple_form
   sinatra
+  skylight
   spring
   spring-commands-rspec
   spring-watcher-listen
