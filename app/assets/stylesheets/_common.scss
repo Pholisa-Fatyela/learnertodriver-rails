@@ -226,11 +226,11 @@ footer {
 .flex {
   display: flex;
 
-  .row  {
+  &.row  {
     flex-direction: row;
   }
 
-  .column {
+  &.column {
     flex-direction: column;
   }
 

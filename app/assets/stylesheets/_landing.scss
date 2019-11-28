@@ -1,3 +1,28 @@
 .wrap {
-  width: 20%;
+  max-width: 60%;
+  margin: 2rem 0rem 2rem 2rem;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: $wrap-shadow;
+
+  &:nth-of-type(2) {
+    margin: -4rem 0rem -4rem 6rem;
+    z-index: 1;
+  }
+
+  &:nth-of-type(3) {
+    margin: 2rem 0rem 2rem 2rem;
+  }
+
+  .svg  {
+    width: 70%;
+    margin: auto;
+  }
+
+}
+
+@media screen and (min-width: 320px) {
+  .wrap {
+    max-width: 80%;
+  }
 }
