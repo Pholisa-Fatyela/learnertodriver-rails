@@ -1,12 +1,12 @@
 .wrap {
-  max-width: 60%;
+  max-width: 80%;
   margin: 2rem 0rem 2rem 2rem;
   padding: 2rem;
   border-radius: 1.2rem;
   box-shadow: $wrap-shadow;
 
   &.offset-left {
-    margin: -4rem 0rem -4rem 6rem;
+    margin: 2rem;
   }
 
   &.offset-up {
@@ -20,5 +20,25 @@
   .svg  {
     width: 70%;
     margin: auto;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .wrap {
+    max-width: 60%;
+
+    &.offset-left {
+      margin: -4rem 0rem -4rem 6rem;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .wrap {
+    max-width: 60%;
+
+    &.offset-left {
+      margin: -4rem 0rem -4rem 4rem;
+    }
   }
 }

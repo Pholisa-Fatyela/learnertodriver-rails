@@ -8,7 +8,7 @@
 }
 
 .overview-cards {
-justify-content: space-between;
+  justify-content: space-between;
 
   &:first-child {
     background: red;
@@ -234,7 +234,7 @@ hr {
 }
 
 .sideimage {
-  background-image: linear-gradient(rgba(0,90,132, .7),rgba(0,162,219,.6)),url(image_path("backgrounds/crane.jpg"));
+  background-image: linear-gradient(rgba(0,90,132, .7),rgba(0,162,219,.6)),url(image_path("bg/main.jpg"));
 }
 
 // 480px
@@ -329,6 +329,6 @@ hr {
 @media screen and (max-width: 890px) {
   .backimage {
     background-size: cover;
-    background-image: linear-gradient(rgba(0,0,0, .7),rgba(0,0,0,.6)),url(image_path("backgrounds/crane.jpg"));
+    background-image: linear-gradient(rgba(0,0,0, .7),rgba(0,0,0,.6)),url(image_path("bg/main.jpg"));
   }
 }
