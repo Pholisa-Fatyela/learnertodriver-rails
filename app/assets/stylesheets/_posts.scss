@@ -102,6 +102,7 @@ ol {
   .meta {
     margin: 0 .2rem;
     white-space: nowrap;
+    display: flex;
   }
 }
 
@@ -143,6 +144,12 @@ ol {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
+  }
+}
+
+.votes {
+  .vote {
+    color: $night;
   }
 }
 

@@ -10,14 +10,30 @@
   </div>
   <div class="block-meta">
     <div class="meta meta-votes">
-      <span class="fa fa-thumbs-up"></span><%= post.get_upvotes.size %>
-      <span class="fa fa-thumbs-down"></span><%= post.get_downvotes.size %>
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/arrow-up.svg") %>
+      </div>
+      <%= post.get_upvotes.size %>
+
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/arrow-down.svg") %>
+      </div>
+      <%= post.get_downvotes.size %>
     </div>
+
     <div class="meta meta-comments">
-      <span class="fa fa-comments"></span> <%= post.comments.count %>
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/comments.svg") %>
+      </div>
+      <%= post.comments.count %>
     </div>
+
    <div class="meta meta-date">
-      <span class="fa fa-clock-o"></span><%= time_ago_in_words(post.created_at) %> ago
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/clock.svg") %>
+      </div>
+      <%= time_ago_in_words(post.created_at) %> ago
     </div>
+
   </div>
 </div>

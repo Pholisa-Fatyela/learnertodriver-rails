@@ -34,7 +34,6 @@
 .navlist {
   align-content: center;
   align-items: center;
-  display: flex;
   flex-flow: row wrap;
 
   &.spaced-between {
@@ -136,9 +135,8 @@
   background: $white;
   border-bottom: 2px solid $clean;
   box-shadow: $block-shadow;
-  display: flex;
-  justify-content: space-between;
-  padding: .2rem;
+  // justify-content: space-between;
+  padding: .8rem;
 }
 
 .outline {
@@ -180,10 +178,19 @@
 }
 
 .icon {
+  margin: 2px 5px;
+
+  &.light-fill svg {
+      fill: $white;
+    }
+
+  &.dark-fill svg {
+      fill: $border;
+    }
+
   svg {
-    width: 20px;
-    height: 20px;
-    fill: $white;
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -209,14 +216,14 @@
 }
 
 .breadcrumbs-container {
-  margin: 0 2.2rem;
+  margin: auto 1.1rem;
 }
 
 .breadcrumbs {
   // font-size: 14px;
   list-style: none;
-  padding: 16px 0;
-  margin: 0 1.2rem;
+  // padding: 16px 0;
+  // margin: 0 1.2rem;
   text-transform: lowercase;
 
   li {

@@ -3,7 +3,7 @@
 </header>
 
   <nav role="navigation" class="bottom-border dark navigation">
-    <ul class="centered navlist">
+    <ul class="centered flex navlist">
       <li><%= link_to "Home", root_path, class: "nav-item bottom-border #{current? "active", root_path}"%></li>
       <li><%= link_to "Quizzes", quizzes_path, class: "nav-item bottom-border #{current? "active", quizzes_path}"%></li>
       <li><%= link_to "Posts", posts_path, class: "nav-item bottom-border #{current? "active", posts_path}"%></li>
@@ -11,7 +11,7 @@
     </ul>
   </nav>
 
-  <div class="secondary-nav">
+  <div class="flex spaced-between secondary-nav">
     <div class="breadcrumbs-container">
       <%= breadcrumbs separator: " / " %>
     </div>

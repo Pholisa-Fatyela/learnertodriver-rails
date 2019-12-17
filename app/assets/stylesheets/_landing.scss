@@ -9,6 +9,10 @@
     margin: 2rem;
   }
 
+  &.offset-right {
+    margin: 2rem;
+  }
+
   &.offset-up {
     margin: 2rem 0rem 2rem 2rem;
   }
@@ -19,6 +23,7 @@
 
   .svg  {
     width: 70%;
+    max-width: 200px;
     margin: auto;
   }
 }
@@ -29,6 +34,9 @@
 
     &.offset-left {
       margin: -4rem 0rem -4rem 6rem;
+    }
+    &.offset-right {
+      margin: -4rem 4rem -4rem 0rem;
     }
   }
 }

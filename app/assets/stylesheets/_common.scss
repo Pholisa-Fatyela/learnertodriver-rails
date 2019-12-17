@@ -241,19 +241,24 @@ footer {
   &.baseline {
     align-items: baseline;
   }
+
+  &.spaced-between {
+    justify-content: space-between;
+  }
+
+  &.spaced-around {
+    justify-content: space-around;
+  }
+
+  &.centered {
+    justify-content: center;
+  }
+
+  &.center-aligned {
+    align-items: center;
+  }
 }
 
-.spaced-between {
-  justify-content: space-between;
-}
-
-.spaced-around {
-  justify-content: space-around;
-}
-
-.centered {
-  justify-content: center;
-}
 
 .capitalized {
   text-transform: capitalize;

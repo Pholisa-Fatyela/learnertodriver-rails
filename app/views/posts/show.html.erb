@@ -20,26 +20,30 @@
       </div>
     </div>
 
+    <div class="flex spaced-between meta">
+      <div class="flex small post-date">
+        <div class="dark-fill icon">
+          <%= inline_svg("icons/clock.svg") %>
+        </div>
+         <div class="grey-text">Published <%= time_ago_in_words(@post.created_at) %> ago</div>
+      </div>
 
-    <div class="meta">
-      <p class="small post-date pull-left">
-        Published <%= time_ago_in_words(@post.created_at) %> ago
-      <br>
-      </p>
+      <div class="votes">
+        <div class="flex btn-group">
 
-      <div class="votes pull-right">
-        <div class="btn-group">
+        <div class="dark-fill icon">
           <%= link_to like_post_path(@post), method: :put, class: "vote" do %>
-
-          <span class="fa fa-thumbs-up"></span>
+          <%= inline_svg("icons/arrow-up.svg") %>
             <%= @post.get_upvotes.size %>
           <% end %>
+        </div>
 
+        <div class="dark-fill icon">
           <%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
-
-          <span class="fa fa-thumbs-down"></span>
+          <%= inline_svg("icons/arrow-down.svg") %>
             <%= @post.get_downvotes.size %>
           <% end %>
+        </div>
 
         </div>
       </div>
