@@ -180,6 +180,18 @@
 .icon {
   margin: 2px 5px;
 
+  &.insta svg {
+    fill: $insta;
+    width: 25px;
+    height: 25px;
+  }
+
+  &.twitter svg {
+    fill: $tweet;
+    width: 25px;
+    height: 25px;
+  }
+
   &.light-fill svg {
       fill: $white;
     }

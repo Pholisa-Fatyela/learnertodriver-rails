@@ -11,17 +11,33 @@
       <p><%= truncate(strip_tags(post.content.to_s), length: 65) %></p>
       <%= link_to "Read More", post, class: "read-more" %>
     </div>
-    <div class="block-meta">
-      <div class="meta-date">
-        <span class="fa fa-clock-o"></span><%= time_ago_in_words(post.created_at) %> ago
+  <div class="block-meta">
+    <div class="meta meta-votes">
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/arrow-up.svg") %>
       </div>
-      <div class="meta-votes">
-        <span class="fa fa-thumbs-up"></span><%= post.get_upvotes.size %>
-        <span class="fa fa-thumbs-down"></span><%= post.get_downvotes.size %>
+      <%= post.get_upvotes.size %>
+
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/arrow-down.svg") %>
       </div>
-      <div class="meta-comments">
-        <span class="fa fa-comments"></span> <%= post.comments.count %>
-      </div>
+      <%= post.get_downvotes.size %>
     </div>
+
+    <div class="meta meta-comments">
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/comments.svg") %>
+      </div>
+      <%= post.comments.count %>
+    </div>
+
+   <div class="meta meta-date">
+      <div class="dark-fill icon">
+        <%= inline_svg("icons/clock.svg") %>
+      </div>
+      <%= time_ago_in_words(post.created_at) %> ago
+    </div>
+
+  </div>
   </div>
 <% end %>
