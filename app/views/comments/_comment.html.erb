@@ -3,7 +3,7 @@
   <div class="comment-inner">
       <div class="comment-header">
           <cite class="comment-meta"><%= comment.user.name %></cite>
-          <p>Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
+          <p class="grey-text">Posted <%= time_ago_in_words(comment.created_at) %> ago</p>
           <div class="comment-actions">
             <% if comment.user == current_user %>
 

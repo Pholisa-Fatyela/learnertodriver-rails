@@ -12,11 +12,14 @@
       <% end %>
     </ul>
 
-  <div class="controls" id="controls">
-    <button data-action="quiz#previous">← Previous</button>
-    <button data-action="quiz#next">Next →</button>
-  </div>
+    <hr class="hr-grey">
+
+    <div class="controls" id="controls">
+
+      <button data-action="quiz#previous" class="button"> Previous <div class="pull-left light-fill icon"><%= inline_svg("icons/arrow-left.svg") %></div></button>
+
+      <button data-action="quiz#next" class="button">Next <div class="pull-right light-fill icon"><%= inline_svg("icons/arrow-right.svg") %></div></button>
+    </div>
 
   </div>
-
 </div>
