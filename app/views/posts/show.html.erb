@@ -32,26 +32,44 @@
         <div class="flex btn-group">
 
         <% if current_user.liked? @post %>
-        <!-- shouldnt be able to place same vote again -->hh
+
+          <div class="blue-fill icon">
+            <div class="vote">
+              <%= inline_svg("icons/arrow-up.svg") %>
+              <%= @post.get_upvotes.size %>
+            </div>
+          </div>
+
+        <% else %>
+
+          <div class="dark-fill icon">
+            <%= link_to like_post_path(@post), method: :put, class: "vote" do %>
+            <%= inline_svg("icons/arrow-up.svg") %>
+              <%= @post.get_upvotes.size %>
+            <% end %>
+          </div>
+
         <% end %>
 
         <% if current_user.disliked? @post %>
-        <!-- shouldnt be able to place same vote again -->kk
+
+          <div class="blue-fill icon">
+            <div class="vote">
+              <%= inline_svg("icons/arrow-down.svg") %>
+              <%= @post.get_downvotes.size %>
+            </div>
+          </div>
+
+        <% else %>
+
+          <div class="dark-fill icon">
+            <%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
+            <%= inline_svg("icons/arrow-down.svg") %>
+              <%= @post.get_downvotes.size %>
+            <% end %>
+          </div>
+
         <% end %>
-
-        <div class="dark-fill icon">
-          <%= link_to like_post_path(@post), method: :put, class: "vote" do %>
-          <%= inline_svg("icons/arrow-up.svg") %>
-            <%= @post.get_upvotes.size %>
-          <% end %>
-        </div>
-
-        <div class="dark-fill icon">
-          <%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
-          <%= inline_svg("icons/arrow-down.svg") %>
-            <%= @post.get_downvotes.size %>
-          <% end %>
-        </div>
 
         </div>
       </div>
