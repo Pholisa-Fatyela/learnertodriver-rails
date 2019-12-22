@@ -40,15 +40,29 @@
 
               <li>
                 <%= link_to user_path(current_user), class: 'user-menu-link' do %>
-                  <i class="fa fa-user"></i> Profile
+                  <div class="pull-left dark-fill icon">
+                    <%= inline_svg("icons/user-icon.svg") %>
+                  </div> Profile
                 <% end %>
               </li>
+
+              <% if warden.user.admin == true %>
+              <li>
+                <%= link_to rails_admin_path, class: 'user-menu-link' do %>
+                  <div class="pull-left dark-fill icon">
+                    <%= inline_svg("icons/settings.svg") %>
+                  </div> Admin
+                <% end %>
+              </li>
+              <% end %>
 
               <div class="divider"></div>
 
               <li>
                 <%= link_to destroy_user_session_path, class: 'user-menu-link', :method => :delete  do %>
-                  <i class="fa fa-power-off"></i> Log Out
+                  <div class="pull-left dark-fill icon">
+                    <%= inline_svg("icons/power-button-off.svg") %>
+                  </div> Log Out
                 <% end %>
               </li>
 
@@ -60,7 +74,6 @@
       <% else %>
 
         <div class="header-links">
-
           <%= link_to new_user_session_path, class: 'nav-link noline' do %>
             Sign In
           <% end %>
@@ -72,7 +85,6 @@
           <% end %>
 
         </div>
-
       <% end %>
 
     </div>

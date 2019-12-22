@@ -258,7 +258,6 @@ gem 'dalli', groups: [:production]
 # https://github.com/activerecord-hackery/ransack
 # Object-based searching
 gem 'ransack'
-
 gem 'friendly_id'
 gem 'acts_as_votable'
 gem 'bourbon'
