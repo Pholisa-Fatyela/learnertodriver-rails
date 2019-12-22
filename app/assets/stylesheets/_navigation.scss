@@ -184,12 +184,20 @@
     fill: $insta;
     width: 25px;
     height: 25px;
+
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
   }
 
   &.twitter svg {
     fill: $tweet;
     width: 25px;
     height: 25px;
+
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
   }
 
   &.light-fill svg {
@@ -210,10 +218,8 @@
 
   svg {
     position: absolute;
-    top: .5em;
-    right: .2em;
+    top: .6em;
     left: .4em;
-    bottom: .2em;
   }
 }
 
@@ -222,7 +228,7 @@
   position: relative;
 
   .search-input {
-    padding: .4em .4em .4em 2.1em;;
+    padding: .4em .2em .2em 1.5em;
     font-size: 18px;
   }
 }

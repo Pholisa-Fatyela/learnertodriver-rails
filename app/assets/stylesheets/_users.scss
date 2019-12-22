@@ -100,7 +100,7 @@
     }
   }
 
-  svg , img {
+  svg, img {
     display: block;
     width: auto;
     height: 60px;
@@ -125,7 +125,6 @@
 .user-menu-wrap {
   position: relative;
 }
-
 
 .menu-container {
   opacity: 0;
@@ -160,6 +159,10 @@
     &:hover {
       background-color: $brand-blue;
       color: $white;
+
+      svg {
+        fill: $white;
+      }
     }
   }
 
@@ -174,10 +177,3 @@
     top: -16px;
   }
 }
-
-// .nav-profile
-  // justify-content: center;
-  // width: 100%;
-
-// .breadcrumbs-container
-// margin: 0
