@@ -208,6 +208,10 @@
       fill: $border;
     }
 
+  &.blue-fill svg {
+      fill: $blue;
+    }
+
   svg {
     width: 15px;
     height: 15px;
