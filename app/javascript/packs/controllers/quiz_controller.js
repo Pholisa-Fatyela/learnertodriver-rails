@@ -12,6 +12,7 @@ export default class extends Controller {
     let lastItem = this.questionTargets.length - 1;
     if (this.index < lastItem ) {
       this.index++
+      console.log("user selected answer number");
     } else {
         console.log("end of Quiz");
    }
