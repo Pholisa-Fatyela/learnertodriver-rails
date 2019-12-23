@@ -138,8 +138,7 @@
 
     .group {
       flex-basis: 100%;
-      margin-bottom: 1.3rem;
-      margin-right: 1.3rem;
+      margin: .2rem 1.3rem;
     }
 
     .copyright {
@@ -154,4 +153,28 @@
   .block {
     text-align: center;
   }
+
+.breadcrumbs-container {
+  margin: 0;
+  max-width: 50%;
+}
+
+.header-links {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  margin: 1.5%;
+}
+
+.controls {
+  .button {
+    width: 100%;
+    margin: .2rem;
+  }
+}
+
+
+
 }
