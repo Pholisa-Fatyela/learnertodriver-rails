@@ -31,7 +31,7 @@
       <div class="votes">
         <div class="flex btn-group">
 
-        <% if current_user.liked? @post %>
+        <% if current_user and current_user.liked? @post %>
 
           <div class="blue-fill icon">
             <div class="vote">
@@ -51,7 +51,7 @@
 
         <% end %>
 
-        <% if current_user.disliked? @post %>
+        <% if current_user and current_user.disliked? @post %>
 
           <div class="blue-fill icon">
             <div class="vote">
