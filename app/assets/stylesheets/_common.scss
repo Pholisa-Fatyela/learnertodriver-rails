@@ -18,7 +18,7 @@ html {
   width: 100%;
 
   &.debug * {
-    background: rgba(255, 0, 0, .1);
+    background: rgba($blue, .1);
     box-shadow: 0 0 0 1px $border;
   }
 }
