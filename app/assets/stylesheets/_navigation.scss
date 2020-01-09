@@ -211,6 +211,10 @@
       fill: $blue;
     }
 
+  &.ocean-fill svg {
+      fill: $ocean;
+    }
+
   svg {
     width: 15px;
     height: 15px;
