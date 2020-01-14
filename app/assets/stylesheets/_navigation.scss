@@ -199,17 +199,25 @@
     }
   }
 
-  &.light-fill svg {
+  &.light-fill {
+    svg {
       fill: $white;
     }
+  }
 
-  &.dark-fill svg {
+  &.dark-fill {
+    svg {
       fill: $border;
     }
+  }
 
-  &.blue-fill svg {
+  &.blue-fill {
+    color: $blue;
+
+    svg {
       fill: $blue;
     }
+  }
 
   &.ocean-fill svg {
       fill: $ocean;
