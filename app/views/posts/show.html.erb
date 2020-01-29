@@ -22,7 +22,7 @@
 
     <div class="flex spaced-between meta">
       <div class="flex small post-date">
-        <div class="dark-fill icon">
+        <div class="dark-fill small-svg icon">
           <%= inline_svg("icons/clock.svg") %>
         </div>
          <div class="grey-text">Published <%= time_ago_in_words(@post.created_at) %> ago</div>
@@ -33,7 +33,7 @@
 
         <% if current_user and current_user.liked? @post %>
 
-          <div class="blue-fill icon">
+          <div class="blue-fill small-svg icon">
             <div class="vote">
               <%= inline_svg("icons/arrow-up.svg") %>
               <%= @post.get_upvotes.size %>
@@ -42,7 +42,7 @@
 
         <% else %>
 
-          <div class="dark-fill icon">
+          <div class="dark-fill small-svg icon">
             <%= link_to like_post_path(@post), method: :put, class: "vote" do %>
             <%= inline_svg("icons/arrow-up.svg") %>
               <%= @post.get_upvotes.size %>
@@ -53,7 +53,7 @@
 
         <% if current_user and current_user.disliked? @post %>
 
-          <div class="blue-fill icon">
+          <div class="blue-fill small-svg icon">
             <div class="vote">
               <%= inline_svg("icons/arrow-down.svg") %>
               <%= @post.get_downvotes.size %>
@@ -62,7 +62,7 @@
 
         <% else %>
 
-          <div class="dark-fill icon">
+          <div class="dark-fill small-svg icon">
             <%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
             <%= inline_svg("icons/arrow-down.svg") %>
               <%= @post.get_downvotes.size %>
