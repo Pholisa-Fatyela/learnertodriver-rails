@@ -2,176 +2,176 @@
 <% breadcrumb :post, @post %>
 
 <div class="flex start split gapped">
-  <article class="flex spaced-between column content post">
+	<article class="flex spaced-between column content post">
 
-    <div class="post-header">
-      <h1 class="text-center post-title" itemprop="name headline">
-        <%= @post.title %>
-      </h1>
-    </div>
+		<div class="post-header">
+			<h1 class="text-center post-title" itemprop="name headline">
+				<%= @post.title %>
+			</h1>
+		</div>
 
-    <div class="post-container" itemprop="articleBody">
-      <% if current_user == @post.user %>
-        <%= link_to "Edit", edit_post_path(@post), class: "small pull-right button" %>
-      <% end %>
+		<div class="post-container" itemprop="articleBody">
+			<% if current_user == @post.user %>
+				<%= link_to "Edit", edit_post_path(@post), class: "small pull-right button" %>
+			<% end %>
 
-      <div class="post-content">
-        <%= @post.content %>
-      </div>
-    </div>
+			<div class="post-content">
+				<%= @post.content %>
+			</div>
+		</div>
 
-    <div class="flex spaced-between meta">
-      <div class="flex small post-date">
-        <div class="dark-fill small-svg icon">
-          <%= inline_svg("icons/clock.svg") %>
-        </div>
-         <div class="grey-text">Published <%= time_ago_in_words(@post.created_at) %> ago</div>
-      </div>
+		<div class="flex spaced-between meta">
+			<div class="flex small post-date">
+				<div class="dark-fill small-svg icon">
+					<%= inline_svg("icons/clock.svg") %>
+				</div>
+				 <div class="grey-text">Published <%= time_ago_in_words(@post.created_at) %> ago</div>
+			</div>
 
-      <div class="votes">
-        <div class="flex btn-group">
+			<div class="votes">
+				<div class="flex btn-group">
 
-        <% if current_user and current_user.liked? @post %>
+				<% if current_user and current_user.liked? @post %>
 
-          <div class="blue-fill small-svg icon">
-            <div class="vote">
-              <%= inline_svg("icons/arrow-up.svg") %>
-              <%= @post.get_upvotes.size %>
-            </div>
-          </div>
+					<div class="blue-fill small-svg icon">
+						<div class="vote">
+							<%= inline_svg("icons/arrow-up.svg") %>
+							<%= @post.get_upvotes.size %>
+						</div>
+					</div>
 
-        <% else %>
+				<% else %>
 
-          <div class="dark-fill small-svg icon">
-            <%= link_to like_post_path(@post), method: :put, class: "vote" do %>
-            <%= inline_svg("icons/arrow-up.svg") %>
-              <%= @post.get_upvotes.size %>
-            <% end %>
-          </div>
+					<div class="dark-fill small-svg icon">
+						<%= link_to like_post_path(@post), method: :put, class: "vote" do %>
+						<%= inline_svg("icons/arrow-up.svg") %>
+							<%= @post.get_upvotes.size %>
+						<% end %>
+					</div>
 
-        <% end %>
+				<% end %>
 
-        <% if current_user and current_user.disliked? @post %>
+				<% if current_user and current_user.disliked? @post %>
 
-          <div class="blue-fill small-svg icon">
-            <div class="vote">
-              <%= inline_svg("icons/arrow-down.svg") %>
-              <%= @post.get_downvotes.size %>
-            </div>
-          </div>
+					<div class="blue-fill small-svg icon">
+						<div class="vote">
+							<%= inline_svg("icons/arrow-down.svg") %>
+							<%= @post.get_downvotes.size %>
+						</div>
+					</div>
 
-        <% else %>
+				<% else %>
 
-          <div class="dark-fill small-svg icon">
-            <%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
-            <%= inline_svg("icons/arrow-down.svg") %>
-              <%= @post.get_downvotes.size %>
-            <% end %>
-          </div>
+					<div class="dark-fill small-svg icon">
+						<%= link_to dislike_post_path(@post), method: :put, class: "vote" do %>
+						<%= inline_svg("icons/arrow-down.svg") %>
+							<%= @post.get_downvotes.size %>
+						<% end %>
+					</div>
 
-        <% end %>
+				<% end %>
 
-        </div>
-      </div>
-    </div>
+				</div>
+			</div>
+		</div>
 
-  </article>
+	</article>
 
 <!-- post sidebar -->
-  <aside class="aside content">
+	<aside class="aside content">
 
-    <div class="search-container">
-      <div class="search-wrapper">
-        <input type="text" class="search-input" placeholder="Search">
-        <div class="search-icon icon">
-          <%= inline_svg("icons/magnifying-glass.svg") %>
-        </div>
-      </div>
-    </div>
-    <hr class="hr-grey">
-    <h4 class="bold upcase">Sponsored Content</h4>
-     <div class="adblock">
-        <%= render 'adsense/resp_square' %>
-     </div>
-     <br>
-    <h4 class="bold upcase">Recent Activity</h4>
-     <div class="sidebar-news-feed">
-     </div>
-  </aside>
+		<div class="search-container">
+			<div class="search-wrapper">
+				<input type="text" class="search-input" placeholder="Search">
+				<div class="small-svg search-icon icon">
+					<%= inline_svg("icons/magnifying-glass.svg") %>
+				</div>
+			</div>
+		</div>
+		<hr class="hr-grey">
+		<h4 class="bold upcase">Sponsored Content</h4>
+		 <div class="adblock">
+				<%= render 'adsense/resp_square' %>
+		 </div>
+		 <br>
+		<h4 class="bold upcase">Recent Activity</h4>
+		 <div class="sidebar-news-feed">
+		 </div>
+	</aside>
 
 </div>
 
-  <div class="post-meta-container">
-    <div class="post-author">
+	<div class="post-meta-container">
+		<div class="post-author">
 
-      <div class="post-author-content">
+			<div class="post-author-content">
 
-          <div class="author avatar">
-            <%= image_tag gravatar_url(@post.user.email, :size=> 300), alt: 'profile', class: "author avatar" %>
-          </div>
+					<div class="author avatar">
+						<%= image_tag gravatar_url(@post.user.email, :size=> 300), alt: 'profile', class: "author avatar" %>
+					</div>
 
-          <div class="capitalized author username">
-            <h3><%= link_to @post.user.name, user_path(@post.user) %></h3>
-          </div>
+					<div class="capitalized author username">
+						<h3><%= link_to @post.user.name, user_path(@post.user) %></h3>
+					</div>
 
-          <div class="author bio">
-            <p><%= @post.user.bio %></p>
-          </div>
-          <div class="author social">
-            <div class="flex centered">
+					<div class="author bio">
+						<p><%= @post.user.bio %></p>
+					</div>
+					<div class="author social">
+						<div class="flex centered">
 
-          <% if @post.user.social_link_twitter %>
-              <%= link_to "https://twitter.com/#{ @post.user.social_link_twitter}", target: "_blank" do %>
-                <div class="twitter icon">
-                  <%= inline_svg("twitter.svg") %>
-                </div>
-              <% end %>
-           <% end %>
+					<% if @post.user.social_link_twitter %>
+							<%= link_to "https://twitter.com/#{ @post.user.social_link_twitter}", target: "_blank" do %>
+								<div class="twitter icon">
+									<%= inline_svg("twitter.svg") %>
+								</div>
+							<% end %>
+					 <% end %>
 
-          <% if @post.user.social_link_instagram %>
-              <%= link_to "https://instagram.com/#{ @post.user.social_link_instagram }", target: "_blank" do %>
-                <div class="insta icon">
-                  <%= inline_svg("instagram.svg") %>
-                </div>
-             <% end %>
-           <% end %>
+					<% if @post.user.social_link_instagram %>
+							<%= link_to "https://instagram.com/#{ @post.user.social_link_instagram }", target: "_blank" do %>
+								<div class="insta icon">
+									<%= inline_svg("instagram.svg") %>
+								</div>
+						 <% end %>
+					 <% end %>
 
-            </div>
-          </div>
+						</div>
+					</div>
 
-      </div>
+			</div>
 
-    </div>
-  </div>
+		</div>
+	</div>
 
 <article class="gapped comments content">
-  <div class="comments-title-container">
-    <h2 class="comments-title fleft"><%= @post.comments.count %> Comments</h2>
-  </div>
+	<div class="comments-title-container">
+		<h2 class="comments-title fleft"><%= @post.comments.count %> Comments</h2>
+	</div>
 
-  <div id="comment-section" class="comment-section">
+	<div id="comment-section" class="comment-section">
 
-    <% if @post.comments.any? %>
-      <%= render :partial => @post.comments.includes(:user) %>
-    <% else %>
+		<% if @post.comments.any? %>
+			<%= render :partial => @post.comments.includes(:user) %>
+		<% else %>
 
-    <div class="comment-header">
-      <h4>Be the first to comment</h4>
-    </div>
+		<div class="comment-header">
+			<h4>Be the first to comment</h4>
+		</div>
 
-    <% end %>
+		<% end %>
 
-    <div id="respond" class="comment-respond">
-      <h4 id="reply-title" class="comment-reply-title">Leave a Reply</h4>
+		<div id="respond" class="comment-respond">
+			<h4 id="reply-title" class="comment-reply-title">Leave a Reply</h4>
 
-    <%= simple_form_for [@post, Comment.new]  do |f| %>
-      <div class="field">
-        <%= f.text_area :body, class: "form-control" %>
-      </div>
+		<%= simple_form_for [@post, Comment.new]  do |f| %>
+			<div class="field">
+				<%= f.text_area :body, class: "form-control" %>
+			</div>
 
-        <%= f.submit "Post Comment", class: "button btn-primary" %>
-    <% end %>
+				<%= f.submit "Post Comment", class: "button btn-primary" %>
+		<% end %>
 
-    </div>
-  </div>
+		</div>
+	</div>
 </article>
