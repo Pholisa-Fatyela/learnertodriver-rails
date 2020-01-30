@@ -9,4 +9,6 @@ class Post < ApplicationRecord
   has_many :comments
 
   enum status: [:published, :unpublished, :draft, :not_set]
+	
+	# scope :published, -> { where(published: true) }
 end
