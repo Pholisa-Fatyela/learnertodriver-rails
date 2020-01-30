@@ -165,7 +165,7 @@ trix-toolbar {
     right: 0;
     font-size: 0.75em;
     padding: 15px 10px;
-    background: #fff;
+    background: $white;
     box-shadow: 0 0.3em 1em #ccc;
     border-top: 2px solid #888;
     border-radius: 5px;
@@ -179,14 +179,14 @@ trix-toolbar {
     margin: 0 10px 0 0;
     border-radius: 3px;
     border: 1px solid #bbb;
-    background-color: #fff;
+    background-color: $white;
     box-shadow: none;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
     &.validate:invalid {
-      box-shadow: #F00 0px 0px 1.5px 1px;
+      box-shadow: $crimson 0px 0px 1.5px 1px;
     }
   }
 
@@ -391,7 +391,7 @@ trix-editor {
     height: 1.8em;
     line-height: 1.8em;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $white;
     border: 2px solid highlight;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 
@@ -430,7 +430,7 @@ trix-editor {
     max-width: 90%;
     padding: 0.1em 0.6em;
     font-size: 0.8em;
-    color: #fff;
+    color: $white;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 3px;
 

@@ -62,3 +62,13 @@
     flex: 1 1 100%;
   }
 }
+
+.preview {
+  width: 100%;
+  max-width: 800px;
+  svg {
+    padding: 10px;
+    max-width: 50%;
+    margin: auto;
+  }
+}

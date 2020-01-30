@@ -191,19 +191,19 @@ hr {
 
 .dropdown-button {
   padding: .6rem .6rem .6rem 1.8rem;
-  background-color: #fff;
-  color: #1b1b26;
-  border: 1px solid #bbb4b4;
+  background-color: $white;
+  color: $ocean;
+  border: 1px solid $grey;
 
   &:hover {
-    background: #dddcdc;
-    color: #1b1b26;
+    background: $blue;
+    color: $ocean;
   }
 }
 
 .dropdown-menu {
   margin: .1rem 0;
-  border: 1px solid #bbb4b4;
+  border: 1px solid $grey;
   box-shadow: $light-shadow;
   background: $white;
   position: absolute;
@@ -218,7 +218,7 @@ hr {
 
 .select_item {
   width: 100%;
-  color: #1b1b26;
+  color: $ocean;
   display: flex;
   padding: .2rem .8rem .2rem 1.8rem;
   font-weight: 600;
@@ -229,7 +229,7 @@ hr {
 
   &:hover {
     background-color: #e8e8e8;
-    color: #1b1b26;
+    color: $ocean;
   }
 }
 
