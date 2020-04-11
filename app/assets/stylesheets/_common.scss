@@ -7,6 +7,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   height: 100%;
+  min-width: 350px;
   text-rendering: optimizeLegibility;
 }
 
@@ -18,7 +19,7 @@ html {
   width: 100%;
 
   &.debug * {
-    background: rgba($blue, .1);
+    background: rgba(255, 0, 0, .1);
     box-shadow: 0 0 0 1px $border;
   }
 }
@@ -171,6 +172,14 @@ footer {
   text-align: right;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.level-one {
+  z-index: 1;
+}
+
 .top-fixed {
   position: fixed;
   width: 100%;
@@ -207,12 +216,26 @@ footer {
   opacity: 0;
 }
 
+.tall {
+  height: 65vh;
+}
+
 .full-height {
   min-height: 100vh;
 }
 
 .full-width {
   width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.mid-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .flex {
@@ -242,6 +265,10 @@ footer {
     justify-content: space-around;
   }
 
+  &.evenly-spaced {
+    justify-content: space-evenly;
+  }
+
   &.centered {
     justify-content: center;
   }
@@ -251,6 +278,9 @@ footer {
   }
 }
 
+.clickable {
+  cursor: pointer;
+}
 
 .capitalized {
   text-transform: capitalize;
@@ -290,7 +320,7 @@ footer {
 }
 
 .medium {
-  font-size: 1em;
+  font-size: .80em;
 }
 
 .small {
