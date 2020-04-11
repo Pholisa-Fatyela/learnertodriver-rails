@@ -1,8 +1,6 @@
 class QuizzesController < ApplicationController
   # before_action :authenticate_user!
   before_action :set_quiz, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
-  before_action :sanitize_content, only: [:show, :edit, :update]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
 
 
   # GET /quizzes
@@ -51,19 +49,6 @@ class QuizzesController < ApplicationController
   end
 
   private
-
-  def require_same_user
-    if current_user != @quiz.user
-      flash[:danger] = "Not authorized to edit this quiz"
-      redirect_to root_path
-    end
-  end
-
-    # Sanitize user generated HTML and CSS
-    def sanitize_content
-      Sanitize.fragment(@quiz, Sanitize::Config::RELAXED)
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_quiz
       @quiz = Quiz.friendly.find(params[:id])

@@ -39,7 +39,7 @@
 }
 
 .comment-inner {
-  margin-left: 110px;
+  margin-left: 90px;
   padding: 2%;
   background: $flat;
   position: relative;
@@ -57,14 +57,12 @@
   }
 }
 
-.comment {
-  .avatar {
-    float: left;
-    width: 60px;
-    height: 60px;
-    background: $grey;
-    border-radius: 15%;
-  }
+.comment-avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  background: $grey;
+  border-radius: 15%;
 }
 
 .comment-header {
@@ -145,6 +143,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .comment-inner {
     margin: 0;
     padding: 5px;
@@ -161,15 +160,8 @@
     margin: .2rem;
   }
 
-  // article {
-  //   margin: 1.3rem;
-  //   padding: 1.2rem;
-  // }
-
-  .comment {
-    .avatar {
-      float: none;
-      margin: 8px 0;
-    }
+  .comment-avatar {
+    float: none;
+    margin: 8px 0;
   }
 }

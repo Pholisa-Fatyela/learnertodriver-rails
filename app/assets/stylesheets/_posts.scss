@@ -157,6 +157,12 @@ ol {
   }
 }
 
+.grouped {
+  .icon,p {
+    margin: 0 5px;
+  }
+}
+
 .author {
   img {
     border: 8px solid $white;

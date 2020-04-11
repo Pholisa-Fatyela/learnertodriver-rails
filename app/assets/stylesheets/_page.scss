@@ -1,3 +1,29 @@
+.tabbar {
+  border: 1px solid $gainsboro;
+
+  &.grouped {
+    margin:0;
+  }
+
+  .tab {
+    background: $gainsboro;
+    cursor: pointer;
+    padding: 2rem .2rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
+
+    &.active {
+      background: $white;
+      box-shadow: $wrap-shadow;
+      border-left: 1px solid $gainsboro;
+      border-right: 1px solid $gainsboro;
+      font-weight: bold;
+    }
+  }
+}
+
 .credit-content {
   text-align: center;
 
@@ -54,6 +80,10 @@
   background: $white;
   box-shadow: 0 0 5px rgba(0, 0, 0, .15);
   padding: 2rem;
+}
+
+.sparkline {
+  padding: 2rem .4rem;
 }
 
 .heading {
@@ -199,11 +229,6 @@
   box-shadow: $full-box;
 }
 
-
-@media screen and (max-width: 320px) {
-
-}
-
 @media screen and (min-width: 700px) {
   .stats-box {
     width: 85%;
@@ -230,23 +255,6 @@
   .block {
     width: 45%;
   }
-}
-
-@media screen and (max-width: 650px) {
-  .block {
-    width: 80%;
-  }
-
-  .split {
-    .post {
-      width: 100%;
-    }
-
-    .aside {
-      display: none;
-    }
-  }
-
 }
 
 @media screen and (max-width: 540px) {
@@ -277,4 +285,28 @@
   .gapped {
     margin: .8rem;
   }
+}
+
+@media screen and (max-width: 650px) {
+  .tabbar {
+
+    .tab {
+      padding: 1.2rem .2rem;
+    }
+  }
+
+  .block {
+    width: 80%;
+  }
+
+  .split {
+    .post {
+      width: 100%;
+    }
+
+    .aside {
+      display: none;
+    }
+  }
+
 }

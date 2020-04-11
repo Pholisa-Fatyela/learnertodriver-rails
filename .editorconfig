@@ -7,7 +7,7 @@ root = true
 [*]
 end_of_line = lf
 insert_final_newline = false
-indent_style = tab
+indent_style = space
 indent_size = 2
 
 # Matches multiple files with brace expansion notation
@@ -15,24 +15,24 @@ indent_size = 2
 [*.{js,html,scss,rb,erb}]
 charset = utf-8
 
-# 2 tab indentation
+# 2 space indentation
 [*.{js,html,scss,rb,erb}]
-indent_style = tab
+indent_style = space
 indent_size = 2
 
 [*.{yml,yaml}]
 indent_style = space
 
-# Tab indentation (no size specified)
+# space indentation (no size specified)
 [Makefile]
-indent_style = tab
+indent_style = space
 
 # Indentation override for all JS under lib directory
 [lib/**.js]
-indent_style = tab
+indent_style = space
 indent_size = 2
 
 # Matches the exact files either package.json or .travis.yml
 [{package.json,.travis.yml}]
-indent_style = tab
+indent_style = space
 indent_size = 2
